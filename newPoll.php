@@ -117,7 +117,7 @@ $accessToken = $facebook->getAccessToken();
                             </tr>
                             <tr>
                                 <td></td>
-                                <td> <button Submit </button></td>
+                                <td> <button> Submit </button></td>
                             </tr>
                         </tbody>
                     </table>
