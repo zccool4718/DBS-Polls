@@ -7,6 +7,9 @@
 
 include("header.php");
 
+            $sql = "SELECT * FROM users WHERE oauth_provider = 'facebook' AND oauth_uid = ". $user['id'];
+            $result = $database->query($sql);
+            print_r($result);
 ?>
     <script type="text/javascript">
         $(document).ready(function(){
