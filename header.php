@@ -23,6 +23,8 @@ $facebook = new Facebook(array(
 	'cookie' => true
 ));
 
+$session = $facebook->getSession();
+
 if(!empty($session)) {
 	try{
             $uid = $facebook->getUser();
