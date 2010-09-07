@@ -59,7 +59,7 @@ $accessToken = $facebook->getAccessToken();
             <tr>
                 <td>
                     
-                    <table width="100%" border="0">
+                    <table width="100%" border="0" class="poll">
                         <tbody>
                             <tr>
                                 <td>Post to page/group('s)</td>
@@ -105,18 +105,19 @@ $accessToken = $facebook->getAccessToken();
                             <tr>
                                 <td>paid options here</td>
                                 <td>
+                                    <input type="checkbox" name="paidOptions" value="advertise" /> Advertise the poll to get more votes. ($5) <br />
                                     <input type="checkbox" name="paidOptions" value="pollOpen" /> Make my poll open to anyone, even none facebook people. ($10) <br />
                                     <input type="checkbox" name="paidOptions" value="noAds" /> Don't show ad's on my poll page ($5) <br />
-                                    <input type="checkbox" name="paidOptions" value="anyComment" /> Let anyone post a comment, even none facebook people. ($5) <br />
+                                    <input type="checkbox" name="paidOptions" value="anyComment" /> Let none facebook people post comments. ($2) <br />
                                     <input type="checkbox" name="paidOptions" value="morePolls" /> Let me run more than one poll at a time. ($2)<br />
                                     (NOTE: You can only run one poll at a time, if you wish to run more than one poll it will be ($2)) <br />
-                                    <input type="checkbox" name="paidOptions" value="anyComment" /> Let me run my poll longer than the default time. ($2)<br />
+                                    <input type="checkbox" name="paidOptions" value="differentTime" /> Let my poll run different length of time than the defaultc. ($2)<br />
                                     (NOTE: The default time is 1 week, in other to change this time to make your poll run shorter or longer there is a ($2) fee.) <br />
                                 </td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td> submit options here </td>
+                                <td> <button Submit </button></td>
                             </tr>
                         </tbody>
                     </table>
