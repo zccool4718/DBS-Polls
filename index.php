@@ -8,12 +8,14 @@
 include("header.php");
 
 $uid = $facebook->getUser();
-print_r($_COOKIE);
 
-            $tmpJson = file_get_contents("https://graph.facebook.com/me/friends"); 
-            $jsonDecode = json_decode($tmpJson); 
-
-		print_r($jsonDecode);
+$fql_query  =   array(
+			'method' => 'friends.get',
+                        'access_token' => $facebook->getAccessToken,
+			'query' => "SELECT flid,name FROM friendlist WHERE uid = " . $uid
+		);
+		$fql_info = $facebook->api($fql_query);
+		print_r($fql_info);
 
 /**
 		$facebook->api('/'.$uid.'/feed', 'post', array(
