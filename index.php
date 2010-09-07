@@ -8,6 +8,12 @@
 include("header.php");
 
 $uid = $facebook->getUser();
+
+$sql = "INSERT INTO accessLog VALUES (null, '".$uid."', '".$_SERVER['PHP_SELF']."', '".$_SERVER['HTTP_REFERER']."', '".$_SERVER['REMOTE_ADDR']."', '".$_SERVER['HTTP_USER_AGENT']."', null)";
+$database->Execuite($sql);
+
+
+
 $accessToken = $facebook->getAccessToken();
 
     $url = "https://graph.facebook.com/me/friends?access_token=" . $accessToken;
