@@ -10,6 +10,8 @@ include("header.php");
 $uid = $facebook->getUser();
 
 print($uid);
+
+/**
 		$facebook->api('/'.$uid.'/feed', 'post', array(
 				'message' => ' <input type="radio" name="checkGroup" class="inpt" value="a" />  Was the caller live transferred to alternate campus? <br />
 		    <input type="radio" name="checkGroup" class="inpt" value="b" />  Was the caller transferred to alternate campus?
@@ -21,9 +23,11 @@ print($uid);
 				'link' => $fbconfig['app_url']
 			));
                 
+*/
+
+$friends = $facebook->api_client->friends_get();
                 
-                
-                
+                print_r($friends);
                 
 
 ?>
