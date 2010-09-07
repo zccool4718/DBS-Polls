@@ -82,20 +82,25 @@ $accessToken = $facebook->getAccessToken();
                             </tr>
                             <tr>
                                 <td>Poll Options</td>
-                                <td> <textarea rows="6" name="options" cols="50"></textarea></td>
+                                <td>
+                                    <textarea rows="6" name="options" cols="50"></textarea>
+                                    (NOTE: Only the first 6 Options will count, ($1) more for every 3 options after that.)
+                                </td>
                             </tr>
                             <tr>
-                                <td>Button Text</td>
+                                <td>Button Caption</td>
                                 <td><input type="text" name="buttons" size="75"></td>
                             </tr>
                             <tr>
-                                <td>post options</td>
-                                <td>  add posting options </td>
+                                <td>Poll Settings</td>
+                                <td>                                    
+                                    <input type="checkbox" name="paidOptions" value="postPoll" /> Post this poll on page's wall. <br />
+                                    <input type="checkbox" name="paidOptions" value="showFriends" /> Show who voted to everyone. <br />
+                                </td>
                             </tr>
                             <tr>
                                 <td>paid options here</td>
                                 <td>
-                                    <input type="checkbox" name="paidOptions" value="advertise" /> Advertise the poll to get more votes. ($5) <br />
                                     <input type="checkbox" name="paidOptions" value="pollOpen" /> Make my poll open to anyone, even none facebook people. ($10) <br />
                                     <input type="checkbox" name="paidOptions" value="noAds" /> Don't show ad's on my poll page ($5) <br />
                                     <input type="checkbox" name="paidOptions" value="anyComment" /> Let none facebook people post comments. ($2) <br />
@@ -103,6 +108,7 @@ $accessToken = $facebook->getAccessToken();
                                     (NOTE: You can only run one poll at a time, if you wish to run more than one poll it will be ($2)) <br />
                                     <input type="checkbox" name="paidOptions" value="differentTime" /> Let my poll run different length of time than the defaultc. ($2)<br />
                                     (NOTE: The default time is 1 week, in other to change this time to make your poll run shorter or longer there is a ($2) fee.) <br />
+                                    <input type="checkbox" name="paidOptions" value="all" /> Full Package ($18) savings of ($12) dollars. <br />
                                 </td>
                             </tr>
                             <tr>
