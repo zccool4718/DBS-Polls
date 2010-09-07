@@ -34,12 +34,7 @@ if(!empty($session)) {
             $sql = "SELECT * FROM users WHERE oauth_provider = 'facebook' AND oauth_uid = ". $user['id'];
 	    
             $result = $database->query($sql);
-	    print_r(count($result));
-	    echo "<br />";
-	    print_r($result);
-	    echo "<br />";
-	    print_r(!isset($result));
-            if(count($result) == 0 || !isset($result)){
+            if(count($result) -1 == 0){
                 $sql = "INSERT INTO users (oauth_provider, oauth_uid, username, active, timeStamp) VALUES ('facebook', {$user['id']}, '{$user['name']}', 1, null)";
                 print_r($sql);
                 $database->Execuite($sql);
