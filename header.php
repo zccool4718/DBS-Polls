@@ -32,10 +32,10 @@ if(!empty($session)) {
         }
 	if($user['id'] && $user['name']){
             $sql = "SELECT * FROM users WHERE oauth_provider = 'facebook' AND oauth_uid = ". $user['id'];
-	    print_r($sql);
+	    
             $result = $database->query($sql);
 	    print_r(count($result));
-            if(count($result) == 0){
+            if(count($result) == 0 || !isset($result)){
                 $sql = "INSERT INTO users (oauth_provider, oauth_uid, username, active, timeStamp) VALUES ('facebook', {$user['id']}, '{$user['name']}', 1, null)";
                 print_r($sql);
                 $database->Execuite($sql);
