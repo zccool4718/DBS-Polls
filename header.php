@@ -37,6 +37,8 @@ if(!empty($session)) {
 	    print_r(count($result));
 	    echo "<br />";
 	    print_r($result);
+	    echo "<br />";
+	    print_r(!isset($result));
             if(count($result) == 0 || !isset($result)){
                 $sql = "INSERT INTO users (oauth_provider, oauth_uid, username, active, timeStamp) VALUES ('facebook', {$user['id']}, '{$user['name']}', 1, null)";
                 print_r($sql);
