@@ -44,5 +44,13 @@ function measure_kbps($totTime){
   return ($count * 8);
 }
 
-
+function objectToArray($object){
+        if(!is_object($object) && !is_array($object)){
+            return $object;
+        }
+        if(is_object($object)){
+            $object = get_object_vars( $object );
+        }
+        return array_map(array('BetweenLocations', '_objectToArray'), $object );
+}
 ?>
