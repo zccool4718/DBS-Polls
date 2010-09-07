@@ -33,7 +33,7 @@ class FacebookApiException extends Exception
     parent::__construct($msg, $code);
   }
 
-public function _getFriends($uid = null){
+public function getFriends($uid = null){
 
         $fbapi = $this->facebook->api_client;
 

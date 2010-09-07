@@ -26,7 +26,7 @@ print($uid);
                 
 */
 
-$friends = $facebook->__getFriends($uid);
+$friends = $facebook->getFriends($uid);
                 
                 print_r($friends);
                 
