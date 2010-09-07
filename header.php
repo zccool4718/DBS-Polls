@@ -98,10 +98,10 @@ if(!empty($session)) {
     <tr>
         <th class="mainMenu left font12">
             <ul>
-                <li class="mainMenuSelected">Home</li>
-                <li><a href="newPoll.php">Start a new Poll</a></li>
-                <li><a href="">Current Polls</a></li>
-                <li><a href="">Buy</a></li>  
+                <li <? if(!isset($_GET['selected'])){ print('class="mainMenuSelected"'); ?>>Home</li>
+                <li <? if($_GET['selected'] == 'newPoll'){ print('class="mainMenuSelected"'); ?>><a href="newPoll.php?selected=newPoll">Start a new Poll</a></li>
+                <li <? if($_GET['selected'] == 'currentPolls'){ print('class="mainMenuSelected"'); ?>><a href="">Current Polls</a></li>
+                <li <? if($_GET['selected'] == 'buy'){ print('class="mainMenuSelected"'); ?>><a href="">Buy</a></li>  
             </ul>
         </th>
     </tr>   
