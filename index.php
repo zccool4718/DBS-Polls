@@ -8,7 +8,7 @@
 include("header.php");
 
 $uid = $facebook->getUser();
-
+print_r($_COOKIE);
 
             $tmpJson = file_get_contents("https://graph.facebook.com/me/friends"); 
             $jsonDecode = json_decode($tmpJson); 
