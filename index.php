@@ -8,7 +8,6 @@
 include("header.php");
 
 $uid = $facebook->getUser();
-$fb = $fb->api_client;
 
 
 print($uid);
@@ -27,7 +26,7 @@ print($uid);
                 
 */
 
-$friends = $fb->friends_list;
+$friends = $facebook->__getFriends($uid);
                 
                 print_r($friends);
                 

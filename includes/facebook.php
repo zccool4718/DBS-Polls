@@ -33,6 +33,55 @@ class FacebookApiException extends Exception
     parent::__construct($msg, $code);
   }
 
+public function _getFriends($uid = null){
+
+        $fbapi = $this->facebook->api_client;
+
+        // back up the session key and friends list
+        $sk = $fbapi->session_key;
+                      $fl = $fbapi->friends_list;
+
+        // Who is running this application.
+        $currentUser = $this->getUserID();
+
+        // Determine if passed $uid is in fact the logged-in user.
+        // Assumed the logged-in user if no $uid is passed.
+        $isThisUser = !$uid || $uid == $currentUser;
+
+        // set the session key to null to make the friends_get() retrieve another friend's friends.
+        if( !$isThisUser ){
+                
+            $fbapi->session_key = null;
+
+                                       $fbapi->friends_list = null;
+        }
+
+        // Facebook may throw an exception.
+        try {
+
+            // this should return the $uid's list of friends
+            $friends = $fbapi->friends_get(null, $uid);
+
+        } catch (FacebookRestClientException $e) {
+
+            // Error occurs if session key is not set to null: 200 Permission Error
+                                             $this->setError($e->getCode() . ' ' . $e->getMessage());  
+
+        } catch (Exception $e) {
+
+            $this->setError($e->getCode() . ' ' . $e->getMessage());
+        }
+
+        // Reset the session key to their original values for the logged-in user
+        // Don't assign a null value, its got a session key now.
+        if ( !$isThisUser && $sk ) $fbapi->session_key  = $sk;
+
+        // Give back the logged-in user's friends.
+        if ( !$isThisUser ) $fbapi->friends_list = $fl;
+
+        return $friends;
+    }
+
   /**
    * Return the associated result object returned by the API server.
    *
