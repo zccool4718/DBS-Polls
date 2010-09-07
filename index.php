@@ -9,12 +9,9 @@ include("header.php");
 
 $uid = $facebook->getUser();
 $accessToken = $session['access_token'];
-print_r($accessToken);
-print_r($session);
 
             $fql_query  =   array(
 			'method' => 'fql.query',
-                        'access_token' => $accessToken,
 			'query' => 'SELECT uid, first_name, last_name, pic_square, pic_big, sex FROM user WHERE uid = ' . $uid
 		);
 		$fql_info = $facebook->api($fql_query);
