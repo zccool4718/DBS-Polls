@@ -10,12 +10,14 @@ include("header.php");
 $uid = $facebook->getUser();
 $accessToken = $facebook->getAccessToken();
 
-$url = "https://graph.facebook.com/me/friends?access_token=".$accessToken;
 
-            $tmpJson = file_get_contents($url); 
-            $jsonDecode = json_decode($url);
-            print_r($jsonDecode);
-            
+            $fql_query  =   array(
+			'method' => 'fql.query',
+                        'access_token' => $accessToken,
+			'query' => 'SELECT uid, first_name, last_name, pic_square, pic_big, sex FROM user WHERE uid = ' . $uid
+		);
+		$fql_info = $facebook->api($fql_query);
+		print_r($fql_info);
             
 
 print($uid);
