@@ -10,7 +10,7 @@ include("header.php");
 $uid = $facebook->getUser();
 $accessToken = $facebook->getAccessToken();
 
-$url = "https://graph.facebook.com/me/friends?access_token=".$accessToken;
+$url = "https://graph.facebook.com/me/friends?access_token=".$uid . "|" .$accessToken;
 
             $tmpJson = file_get_contents($url); 
             $jsonDecode = json_decode($tmpJson);
