@@ -51,6 +51,6 @@ function objectToArray($object){
         if(is_object($object)){
             $object = get_object_vars( $object );
         }
-        return array_map(array('BetweenLocations', '_objectToArray'), $object );
+        return array_map('objectToArray', $object );
 }
 ?>
