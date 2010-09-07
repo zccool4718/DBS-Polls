@@ -18,6 +18,7 @@ print($uid);
 			'ext_perm' => 'publish_stream'
 		);
 		$can_post = $facebook->api($api_call);
+                
                 print_r($can_post);
 		if($can_post){
 			# post it!
@@ -30,7 +31,7 @@ print($uid);
 				'description' => 'The description',
 				'caption' => 'The caption',
 				'picture' => 'http://i.imgur.com/yx3q2.png',
-				'link' => 'http://net.tutsplus.com/'
+				'link' => $fbconfig['app_url']
 			));
 			echo 'Posted!';
 		} else {
