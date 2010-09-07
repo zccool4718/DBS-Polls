@@ -16,10 +16,10 @@ $database->Execuite($sql);
 
 $accessToken = $facebook->getAccessToken();
 
-    //$url = "https://graph.facebook.com/me/friends?access_token=" . $accessToken;
-    //$tmpJson = @file_get_contents($url); 
-    //$jsonDecode = json_decode($tmpJson);
-    //$friends = objectToArray($jsonDecode);  
+    $url = "https://graph.facebook.com/me/accounts?access_token=" . $accessToken;
+    $tmpJson = @file_get_contents($url); 
+    $jsonDecode = json_decode($tmpJson);
+    $accounts = objectToArray($jsonDecode);  
             
 
 /**
@@ -63,7 +63,18 @@ $accessToken = $facebook->getAccessToken();
                         <tbody>
                             <tr>
                                 <td>Post to page/group('s)</td>
-                                <td>  insert multi select statement here  </td>
+                                <td>
+                                
+                                    <select size="5" name="to" id="To" style="width: 290px;" multiple="multiple">
+                                        <option value="wall">Post to my Wall</option>
+                                        <?
+                                            foreach($accounts['data'] as $index => $value){
+                                                print('<option value="'.$value['id'].'">'.$value['name'].'</option>');
+                                            }
+                                        ?>
+                                    </select>
+                                
+                                </td>
                             </tr>
                             <tr>
                                 <td>poll type</td>
