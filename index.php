@@ -9,8 +9,8 @@ include("header.php");
 
 $uid = $facebook->getUser();
 $accessToken = $session['access_token'];
-print_($accessToken);
-print_($session);
+print_r($accessToken);
+print_r($session);
 
             $fql_query  =   array(
 			'method' => 'fql.query',
