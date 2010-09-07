@@ -108,7 +108,7 @@ $accessToken = $facebook->getAccessToken();
                                     (NOTE: You can only run one poll at a time, if you wish to run more than one poll it will be ($2)) <br />
                                     <input type="checkbox" name="paidOptions" value="differentTime" /> Let my poll run different length of time than the defaultc. ($2)<br />
                                     (NOTE: The default time is 1 week, in other to change this time to make your poll run shorter or longer there is a ($2) fee.) <br />
-                                    <input type="checkbox" name="paidOptions" value="all" /> Full Package ($18) savings of ($12) dollars. <br />
+                                    <input type="checkbox" name="paidOptions" value="all" /> Full Package ($18) savings of ($7) dollars. <br />
                                 </td>
                             </tr>
                             <tr>
