@@ -9,17 +9,17 @@ session_start();
 
 function getDBinfo(){
     $db["host"]     = "localhost";
-    $db["username"] = "Oastage";
+    $db["username"] = "pollsystem";
     $db["password"] = "Qazxsw2!";
-    $db["database"] = "oastage_Facebook";
+    $db["database"] = "pollsystem_Facebookc";
     return $db;
 }
 
 function getFacebookInfo(){    
-    $fbConfig['api_key'] = "d7dda33b7b3e753a20fe7f1664d62911";
-    $fbConfig['app_ID'] = "149980235024093";
-    $fbConfig['app_secret'] = "a8e382ed34c3b0180b551b0a50a1c3ff";
-    $fbConfig['app_url'] = "http://apps.facebook.com/oastage/";
+    $fbConfig['api_key'] = "f6150475525e7dc0ed54fa64b13adc38";
+    $fbConfig['app_ID'] = "156907777659800c";
+    $fbConfig['app_secret'] = "a94589c94c8b5f547d5d53211254e496";
+    $fbConfig['app_url'] = "http://apps.facebook.com/dbspolls/";
     return $fbConfig;
 }
 ?>
