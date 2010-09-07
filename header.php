@@ -35,7 +35,7 @@ if(!empty($session)) {
             $result = $database->query($sql);
             if(count($result) == 0){
                 $sql = "INSERT INTO users (oauth_provider, oauth_uid, username, active, timeStamp) VALUES ('facebook', {$user['id']}, '{$user['name']}', 1, null)";
-                
+                print_r($sql);
                 $database->Execuite($sql);
                 $sql = "SELECT * FROM users WHERE id = " . mysql_insert_id();
                 $result = $database->query($sql);
