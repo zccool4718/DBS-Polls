@@ -8,14 +8,17 @@
 include("header.php");
 
 $uid = $facebook->getUser();
+$accessToken = $facebook->getAccessToken();
 
-$fql_query  =   array(
-			'method' => 'friends.get',
-                        'access_token' => $facebook->getAccessToken,
-			'query' => "SELECT flid,name FROM friendlist WHERE uid = " . $uid
-		);
-		$fql_info = $facebook->api($fql_query);
-		print_r($fql_info);
+$url = "https://graph.facebook.com/me/friends?access_token=".$accessToken;
+
+            $tmpJson = file_get_contents($url); 
+            $jsonDecode = json_decode($tmpJson);
+            print_r($jsonDecode);
+            
+            
+
+print($uid);
 
 /**
 		$facebook->api('/'.$uid.'/feed', 'post', array(
@@ -31,6 +34,7 @@ $fql_query  =   array(
                 
 */
 
+                
 
 ?>
     <script type="text/javascript">
