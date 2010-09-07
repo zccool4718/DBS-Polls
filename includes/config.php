@@ -17,7 +17,7 @@ function getDBinfo(){
 
 function getFacebookInfo(){    
     $fbConfig['api_key'] = "f6150475525e7dc0ed54fa64b13adc38";
-    $fbConfig['app_ID'] = "156907777659800c";
+    $fbConfig['app_ID'] = "156907777659800";
     $fbConfig['app_secret'] = "a94589c94c8b5f547d5d53211254e496";
     $fbConfig['app_url'] = "http://apps.facebook.com/dbspolls/";
     return $fbConfig;
