@@ -88,7 +88,7 @@ $accessToken = $facebook->getAccessToken();
                             </tr>
                             <tr>
                                 <td>Question</td>
-                                <td><input type="text" name="question" size="100"></td>
+                                <td><input type="text" name="question" size="75"></td>
                             </tr>
                             <tr>
                                 <td>options</td>
