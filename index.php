@@ -11,40 +11,20 @@ $uid = $facebook->getUser();
 
 print($uid);
 		$facebook->api('/'.$uid.'/feed', 'post', array(
-				'message' => 'The message',
+				'message' => ' <input type="radio" name="checkGroup" class="inpt" value="a" />  Was the caller live transferred to alternate campus? <br />
+		    <input type="radio" name="checkGroup" class="inpt" value="b" />  Was the caller transferred to alternate campus?
+                                ',
 				'name' => 'The name',
 				'description' => 'The description',
 				'caption' => 'The caption',
 				'picture' => 'http://i.imgur.com/yx3q2.png',
 				'link' => $fbconfig['app_url']
 			));
-			echo 'Posted!';
-		# let's check if the user has granted access to posting in the wall
-		$api_call = array(
-			'method' => 'users.hasAppPermission',
-			'uid' => $uid,
-			'ext_perm' => 'publish_stream'
-		);
-		$can_post = $facebook->api($api_call);
                 
-                print_r($can_post);
-		if($can_post){
-			# post it!
-			# $facebook->api('/'.$uid.'/feed', 'post', array('message' => 'Saying hello from my Facebook app!'));
-			
-			# using all the arguments
-			$facebook->api('/'.$uid.'/feed', 'post', array(
-				'message' => 'The message',
-				'name' => 'The name',
-				'description' => 'The description',
-				'caption' => 'The caption',
-				'picture' => 'http://i.imgur.com/yx3q2.png',
-				'link' => $fbconfig['app_url']
-			));
-			echo 'Posted!';
-		} else {
-			die('Permissions required!');
-		}
+                
+                
+                
+                
 
 ?>
     <script type="text/javascript">
