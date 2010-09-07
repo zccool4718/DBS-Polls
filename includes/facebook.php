@@ -186,7 +186,7 @@ public function getFriends($uid = null){
                       $fl = $fbapi->friends_list;
 
         // Who is running this application.
-        $currentUser = $this->getUserID();
+        $currentUser = $this->getUser();
 
         // Determine if passed $uid is in fact the logged-in user.
         // Assumed the logged-in user if no $uid is passed.
