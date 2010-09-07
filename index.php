@@ -58,7 +58,7 @@ $accessToken = $facebook->getAccessToken();
                 print('                    
                     <tr>
                         <td>'.$value['id'].'</td>
-                        <td><img src="https://graph.facebook.com/'.$value['id'].'/picture">'.$value['name'].'</td>
+                        <td><img src="https://graph.facebook.com/'.$value['id'].'/picture" style="width: 16px; height: 16px;">'.$value['name'].'</td>
                     </tr>          
                 ');
             }
