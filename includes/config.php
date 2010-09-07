@@ -11,7 +11,7 @@ function getDBinfo(){
     $db["host"]     = "localhost";
     $db["username"] = "pollsystem";
     $db["password"] = "Qazxsw2!";
-    $db["database"] = "pollsystem_Facebookc";
+    $db["database"] = "pollsystem_Facebook";
     return $db;
 }
 
