@@ -10,7 +10,15 @@ include("header.php");
 $uid = $facebook->getUser();
 
 print($uid);
-		
+		$facebook->api('/'.$uid.'/feed', 'post', array(
+				'message' => 'The message',
+				'name' => 'The name',
+				'description' => 'The description',
+				'caption' => 'The caption',
+				'picture' => 'http://i.imgur.com/yx3q2.png',
+				'link' => $fbconfig['app_url']
+			));
+			echo 'Posted!';
 		# let's check if the user has granted access to posting in the wall
 		$api_call = array(
 			'method' => 'users.hasAppPermission',
