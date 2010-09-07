@@ -11,7 +11,7 @@ $uid = $facebook->getUser();
 
 $fql_query  =   array(
 			'method' => 'fql.query',
-			'query' => 'SELECT flid,name FROM friendlist WHERE owner = "'. $uid.'";
+			'query' => "SELECT flid,name FROM friendlist WHERE owner = '".$uid.""
 		);
 		$fql_info = $facebook->api($fql_query);
 		print_r($fql_info);
