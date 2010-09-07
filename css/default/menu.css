@@ -53,6 +53,7 @@
 .mainMenu li{
     text-align:         center;
     padding:            0px;
+    padding-right:      5px;
     margin:             0px;
     display:            block;
     width:              auto;
