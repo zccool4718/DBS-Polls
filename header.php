@@ -99,8 +99,8 @@ if(!empty($session)) {
         <th class="mainMenu left font12">
             <ul>
                 <li class="mainMenuSelected">Home</li>
-                <li><a href="">Settings</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="">Start a new Poll</a></li>
+                <li><a href="">Current Polls</a></li>
                 <li><a href="">Buy</a></li>
             </ul>
         </th>

@@ -12,8 +12,10 @@
             <td colspan="2" class="mainFoot center font10">
             <?    
                 $pageGenTime = timer(true);    
-                $kbps=measure_kbps($pageGenTime);
-                $mbps=$kbps / 1024;
+                
+                $sql = "INSERT INTO pageLoadTimes VALUES (null, '".$_SERVER['PHP_SELF']."', '".$pageGenTime."', null)";
+                $database->Execuite($sql);
+                
                 print("Copyrighted Dreambox Services 2010 - 2020 - Page generated in " . $pageGenTime . " seconds");
             
             ?>
