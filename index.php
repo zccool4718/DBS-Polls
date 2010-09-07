@@ -5,7 +5,13 @@
  * @copyright 2010
  */
 
+require("includes/facebook.php");
+require("includes/config.php");
+require("includes/common.php");
+require("classes/class.database.php");
 include("header.php");
+
+$database = new database(getDBinfo());
 
             $sql = "SELECT * FROM users WHERE oauth_provider = 'facebook' AND oauth_uid = ". $user['id'];
             $result = $database->query($sql);
