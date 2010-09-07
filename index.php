@@ -11,7 +11,7 @@ $uid = $facebook->getUser();
 $accessToken = $facebook->getAccessToken();
 
     $url = "https://graph.facebook.com/me?access_token=" . $accessToken;
-    $tmpJson = file_get_contents($url); 
+    $tmpJson = @file_get_contents($url); 
     $jsonDecode = json_decode($tmpJson);
     print_r($jsonDecode);
             
