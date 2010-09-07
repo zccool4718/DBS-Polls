@@ -32,6 +32,7 @@ if(!empty($session)) {
         }
 	if($user['id'] && $user['name']){
             $sql = "SELECT * FROM users WHERE oauth_provider = 'facebook' AND oauth_uid = ". $user['id'];
+	    print_r($sql);
             $result = $database->query($sql);
             if(count($result) == 0){
                 $sql = "INSERT INTO users (oauth_provider, oauth_uid, username, active, timeStamp) VALUES ('facebook', {$user['id']}, '{$user['name']}', 1, null)";
@@ -51,12 +52,7 @@ if(!empty($session)) {
             $_SESSION['oauth_provider'] = $result['oauth_provider'];
             $_SESSION['username'] = $result['username'];
 	} else {
-            $login_url = $facebook->getLoginUrl(array('canvas' => 1,
-                                                 'fbconnect' => 0,
-                                                 'req_perms' => 'publish_stream',
-                                                 'next' => $fbconfig['app_url'] . 'index.php',
-                                                 'cancel_url' => $fbconfig['app_url'] ));
-            echo "<script type='text/javascript'>top.location.href = '$login_url';</script>";
+		echo "something is wrong.";
         }
 } else {
      $login_url = $facebook->getLoginUrl(array('canvas' => 1,
