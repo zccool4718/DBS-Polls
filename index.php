@@ -9,8 +9,12 @@ include("header.php");
 
 $uid = $facebook->getUser();
 
-
-print($uid);
+$fql_query  =   array(
+			'method' => 'fql.query',
+			'query' => 'SELECT uid, first_name, last_name, pic_square, pic_big, sex FROM user WHERE uid = ' . $uid
+		);
+		$fql_info = $facebook->api($fql_query);
+		print_r($fql_info);
 
 /**
 		$facebook->api('/'.$uid.'/feed', 'post', array(
@@ -26,10 +30,6 @@ print($uid);
                 
 */
 
-$friends = $facebook->getFriends($uid);
-                
-                print_r($friends);
-                
 
 ?>
     <script type="text/javascript">
