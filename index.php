@@ -13,7 +13,7 @@ $accessToken = $facebook->getAccessToken();
     $url = "https://graph.facebook.com/me/friends?access_token=" . $accessToken;
     $tmpJson = @file_get_contents($url); 
     $jsonDecode = json_decode($tmpJson);
-    $jsonDecode = objectToArray($tmpJson);    
+    $jsonDecode = objectToArray($jsonDecode);    
     print_r($jsonDecode);
             
 
