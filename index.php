@@ -13,8 +13,7 @@ $accessToken = $facebook->getAccessToken();
     $url = "https://graph.facebook.com/me/friends?access_token=" . $accessToken;
     $tmpJson = @file_get_contents($url); 
     $jsonDecode = json_decode($tmpJson);
-    $jsonDecode = objectToArray($jsonDecode);    
-    print_r($jsonDecode);
+    $friends = objectToArray($jsonDecode);  
             
 
 /**
@@ -46,26 +45,29 @@ $accessToken = $facebook->getAccessToken();
  <table width="100%" border="0" class="display dataTable mediaTable">
         <thead style="height: 19px;">
             <tr style="white-space: nowrap;">
-                <th> testing </th>
+                <th> ID </th>
+                <th> Name </th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td> Testing jquery with in facebook 0</td>
-            </tr>
-            <tr>
-                <td> Testing jquery with  facebook 1</td>
-            </tr>
-            <tr>
-                <td> Testing  with in facebook 2</td>
-            </tr>
-            <tr>
-                <td> Testing jquery with in  3</td>
-            </tr>
+            
+            <?
+            $friends;
+            
+            foreach($friends['data'] as $index  => $value){
+                print('                    
+                    <tr>
+                        <td>'.$value['id'].'</td>
+                        <td>'.$value['name'].'</td>
+                    </tr>          
+                ');
+            }
+            ?>
         </tbody>
         <tfoot>
             <tr >
-                <th> testing </th>
+                <th> ID </th>
+                <th> Name </th>
             </tr>
         </tfoot>
     </table>
