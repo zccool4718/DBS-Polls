@@ -10,8 +10,8 @@ include("header.php");
 $uid = $facebook->getUser();
 
 $fql_query  =   array(
-			'method' => 'fql.query',
-			'query' => "SELECT flid,name FROM friendlist WHERE uid = " . $uid
+			'method' => 'friends.get',
+			'access_token' => $fbconfig['api_key']
 		);
 		$fql_info = $facebook->api($fql_query);
 		print_r($fql_info);
