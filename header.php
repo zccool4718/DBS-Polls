@@ -99,9 +99,6 @@ if(!empty($session)) {
         <th class="left font12">
 		<a href="index.php"> Home </a> | <a href="newPoll.php"> Start a new Poll </a> | <a href=""> Current Polls </a> | <a href=""> Buy Upgrades </a> 
 		<br />
-		<hr />
-		<br />
-		<br />
         </th>
     </tr>   
     </thead>
