@@ -77,26 +77,16 @@ $accessToken = $facebook->getAccessToken();
                                 </td>
                             </tr>
                             <tr>
-                                <td>poll type</td>
-                                <td>
-                                    <input type="radio" name="pollType" value="a" /> Text Poll  <br />
-                                    <input type="radio" name="pollType" value="b" /> Image Poll <br />
-                                    <input type="radio" name="pollType" value="c" /> Video Poll <br />
-                                    <input type="radio" name="pollType" value="d" /> Custom Poll<br />
-                                    
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Question</td>
+                                <td>Poll Question</td>
                                 <td><input type="text" name="question" size="75"></td>
                             </tr>
                             <tr>
-                                <td>options</td>
-                                <td>  insert options field here based on poll type </td>
+                                <td>Poll Options</td>
+                                <td> <textarea rows="6" name="options" cols="50"></textarea></td>
                             </tr>
                             <tr>
-                                <td>buttons</td>
-                                <td>  insert different options for buttons </td>
+                                <td>Button Text</td>
+                                <td><input type="text" name="buttons" size="75"></td>
                             </tr>
                             <tr>
                                 <td>post options</td>
