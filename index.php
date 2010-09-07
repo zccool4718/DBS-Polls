@@ -8,17 +8,13 @@
 include("header.php");
 
 $uid = $facebook->getUser();
-$accessToken = $session['access_token'];
+$accessToken = $facebook->getAccessToken();
 
-            $fql_query  =   array(
-			'method' => 'fql.query',
-			'query' => 'SELECT flid,uid FROM friendlist_member WHERE flid IN (SELECT flid FROM friendlist WHERE owner='.$uid.') '
-		);
-		$fql_info = $facebook->api($fql_query);
-		print_r($fql_info);
+    $url = "https://graph.facebook.com/me?access_token=" . $accessToken;
+    $tmpJson = file_get_contents($url); 
+    $jsonDecode = json_decode($tmpJson);
+    print_r($jsonDecode);
             
-
-print($uid);
 
 /**
 		$facebook->api('/'.$uid.'/feed', 'post', array(
