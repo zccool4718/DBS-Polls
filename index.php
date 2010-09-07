@@ -8,6 +8,8 @@
 include("header.php");
 
 $uid = $facebook->getUser();
+
+print($uid);
 		
 		# let's check if the user has granted access to posting in the wall
 		$api_call = array(
@@ -16,6 +18,7 @@ $uid = $facebook->getUser();
 			'ext_perm' => 'publish_stream'
 		);
 		$can_post = $facebook->api($api_call);
+                print_r($can_post);
 		if($can_post){
 			# post it!
 			# $facebook->api('/'.$uid.'/feed', 'post', array('message' => 'Saying hello from my Facebook app!'));
