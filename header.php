@@ -96,13 +96,12 @@ if(!empty($session)) {
     <table class="mainTable">
     <thead>
     <tr>
-        <th class="mainMenu left font12">
-            <ul>
-                <li <? if(!isset($_GET['selected'])){ print('class="mainMenuSelected"><a href="'); } else { print('<a href="index.php'); } ?>">Home</a></li>
-                <li <? if($_GET['selected'] == 'newPoll'){ print('class="mainMenuSelected"><a href="'); } else { print('<a href="newPoll.php?selected=newPoll'); } ?>">Start a new Poll</a></li>
-                <li <? if($_GET['selected'] == 'currentPolls'){ print('class="mainMenuSelected"><a href="'); } else { print('<a href="'); } ?>">Current Polls</a></li>
-                <li <? if($_GET['selected'] == 'buy'){ print('class="mainMenuSelected"><a href="'); } else { print('<a href="'); } ?>">Buy</a></li>  
-            </ul>
+        <th class="left font12">
+		<a href="index.php"> Home </a> | <a href="newPoll.php"> Start a new Poll </a> | <a href=""> Current Polls </a> | <a href=""> Buy Upgrades </a> 
+		<br />
+		<hr />
+		<br />
+		<br />
         </th>
     </tr>   
     </thead>
