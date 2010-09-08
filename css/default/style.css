@@ -139,6 +139,11 @@ html{
     padding-left:       20px;
 }
 
+.postToTable{
+    border:      1px solid #B3B3B3; 
+    
+}
+
 .postToList{
     width:              275px;    
     
