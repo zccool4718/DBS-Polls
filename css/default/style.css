@@ -69,7 +69,7 @@ html{
 }
 
 .poll thead th{
-    border-bottom:      1px;
+    border-bottom:      1px solid #000000; 
     background-color:   #ffffff;
     
     height:             75px;
