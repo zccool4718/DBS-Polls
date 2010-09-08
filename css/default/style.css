@@ -58,11 +58,11 @@ html{
 
 
 /* Poll */
-.poll{    
+.poll table{    
     border:             1px; 
 }
 
-.poll tbody{
+.poll tbody tr{
     border:             1px;
     background-color:   #F2F2F2;
 }
