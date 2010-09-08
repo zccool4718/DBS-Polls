@@ -78,7 +78,7 @@ $accessToken = $facebook->getAccessToken();
             <tr>
                 <td>Poll Options</td>
                 <td>
-                    <textarea rows="6" name="options" cols="50"></textarea><br />momothpr
+                    <textarea rows="6" name="options" cols="50"></textarea><br />
                     (NOTE: Only the first 6 Options will count, ($1) more for every 3 options after that.)
                 </td>
             </tr>
