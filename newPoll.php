@@ -84,7 +84,7 @@ $accessToken = $facebook->getAccessToken();
                 <td class="title">Poll Options</td>
                 <td>
                     <textarea rows="5" name="options" class="options" cols="50"></textarea><br />
-                    <div class="note font10i">NOTE: Only the first 6 Options will count, ($1) more for every 3 options after that.</div>
+                    <div class="note font10i">NOTE: Only the first 6 Options are free, a free of ($1) for every 3 options after that.</div>
                 </td>
             </tr>
             <tr>
@@ -101,14 +101,14 @@ $accessToken = $facebook->getAccessToken();
             <tr>
                 <td class="title">Paid Features</td>
                 <td>
-                    <input type="checkbox" name="paidOptions" value="pollOpen" /> Make my poll open to anyone, even none facebook people. ($10) <br />
-                    <input type="checkbox" name="paidOptions" value="noAds" /> Don't show ad's on my poll page ($5) <br />
-                    <input type="checkbox" name="paidOptions" value="anyComment" /> Let none facebook people post comments. ($2) <br />
-                    <input type="checkbox" name="paidOptions" value="morePolls" /> Let me run more than one poll at a time. ($2)<br />
-                    <div class="note font10i">NOTE: You can only run one poll at a time, if you wish to run more than one poll it will be ($2)</div> <br />
-                    <input type="checkbox" name="paidOptions" value="differentTime" /> Let my poll run different length of time than the defaultc. ($2)</div><br />
-                    <div class="note font10i">NOTE: The default time is 5 days, to make your poll run shorter or longer there is a ($2) fee.</div> <br />
-                    <input type="checkbox" name="paidOptions" value="all" /> Full Package ($18) savings of ($7) dollars. <br />
+                    <input type="checkbox" name="paidOptions" value="pollOpen" /> Open this poll to non Facebook users. ($10) <br />
+                    <input type="checkbox" name="paidOptions" value="noAds" /> Don't show ad's on my poll page. ($5) <br />
+                    <input type="checkbox" name="paidOptions" value="anyComment" /> Let non facebook people post comments. ($2) <br />
+                    <input type="checkbox" name="paidOptions" value="differentTime" /> Let users vote as many times as they wish. ($2)</div><br />
+                    <input type="checkbox" name="paidOptions" value="differentTime" /> Let my poll run different length of time than the default. ($2)</div><br />
+                    <div class="note font10i">NOTE: The default time is 5 days.</div> <br />
+                    <input type="checkbox" name="paidOptions" value="all" /> Full Package ($15) savings of ($6) dollars. <br />
+                    <input type="checkbox" name="paidOptions" value="allMonth" /> Monthy Full Package. ($50) <br />
                 </td>
             </tr>
             <tr>
