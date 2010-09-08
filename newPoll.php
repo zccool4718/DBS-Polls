@@ -65,14 +65,24 @@ $accessToken = $facebook->getAccessToken();
                 <td class="title"><br /><br />Post to Page('s) / Group('s)</td>
                 <td>
                 <br /><br />
-                    <select size="5" name="postTo" class="postTo" id="postTo" multiple="multiple">
-                        <option value="wall">Post to my Wall</option>
-                        <?
-                            foreach($accounts['data'] as $index => $value){
-                                print('<option value="'.$value['id'].'">'.$value['name'].'</option>');
-                            }
-                        ?>
-                    </select>
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <select size="5" name="postTo" class="postTo" id="postTo" multiple="multiple">
+                                <option value="wall">Post to my Wall</option>
+                                <?
+                                    foreach($accounts['data'] as $index => $value){
+                                        print('<option value="'.$value['id'].'">'.$value['name'].'</option>');
+                                    }
+                                ?>
+                            </select>
+                        </td>
+                        <td>                            
+                            <input type="checkbox" name="paidOptions" value="postPoll" /> Post this poll on page's wall. <br />
+                            <input type="checkbox" name="paidOptions" value="showFriends" /> Show who voted to everyone. <br />
+                        </td>
+                    </tr>
+                </table>
                 
                 </td>
             </tr>
@@ -90,13 +100,6 @@ $accessToken = $facebook->getAccessToken();
             <tr>
                 <td class="title">Button Caption</td>
                 <td><input type="text" name="buttons" class="buttons"></td>
-            </tr>
-            <tr>
-                <td class="title">Poll Settings</td>
-                <td>                                    
-                    <input type="checkbox" name="paidOptions" value="postPoll" /> Post this poll on page's wall. <br />
-                    <input type="checkbox" name="paidOptions" value="showFriends" /> Show who voted to everyone. <br /><br /><br />
-                </td>
             </tr>
             <tr>
                 <td class="title">Paid Features</td>
