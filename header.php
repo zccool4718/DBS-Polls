@@ -93,7 +93,7 @@ if(!empty($session)) {
 </head>
 <body>
     
-    <table class="mainTable">
+    <table>
     <thead>
     <tr>
         <th class="menu font12">
