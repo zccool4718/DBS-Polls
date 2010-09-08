@@ -1,19 +1,19 @@
-.mainTable thead th a:link {
+.menu a:link {
     color:              #4B4B4B;
     text-decoration:    none;
 }
          
-.mainTable thead th a:visited {
+.menu a:visited {
     color:              #4B4B4B;
     text-decoration:    none;
 } 
      
-.mainTable thead th a:hover {
+.menu a:hover {
     color:              #4B4B4B;
     text-decoration:    none;
 }
      
-.mainTable thead th a{
+.menu a{
     color:              #4B4B4B;
     text-decoration:    none;
     
