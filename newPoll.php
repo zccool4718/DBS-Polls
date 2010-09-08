@@ -60,7 +60,7 @@ $accessToken = $facebook->getAccessToken();
                 <td class="title">Post to page/group('s)</td>
                 <td>
                 
-                    <select size="5" name="to" id="To" multiple="multiple">
+                    <select size="5" name="to" id="postTo" multiple="multiple">
                         <option value="wall">Post to my Wall</option>
                         <?
                             foreach($accounts['data'] as $index => $value){
@@ -108,7 +108,7 @@ $accessToken = $facebook->getAccessToken();
             </tr>
             <tr>
                 <td class="title"></td>
-                <td> <button> Submit </button></td>
+                <td> <button class="PollSubmit"> Submit </button></td>
             </tr>
         </tbody>
     </table>
