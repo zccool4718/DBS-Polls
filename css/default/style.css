@@ -55,7 +55,6 @@ html{
 
 /* Poll */
 .poll{    
-    border-collapse:    collapse;
     border:             1px;
     padding:	        0px;
     margin: 	        0px;    
@@ -64,13 +63,15 @@ html{
 .poll tbody{
     padding:	        0px;
     margin: 	        0px;
-    border: 1px;
-    background-color: #F2F2F2;
+    border:             1px;
+    background-color:   #F2F2F2;
 }
 
 .poll thead th{
     padding:	        0px;
     margin: 	        0px;
     background-color:   #ffffff;
+    
+    height:             35px;
     
 }
