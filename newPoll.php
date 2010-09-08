@@ -60,7 +60,7 @@ $accessToken = $facebook->getAccessToken();
                 <td class="title">Post to page/group('s)</td>
                 <td>
                 
-                    <select size="5" name="to" id="postTo" multiple="multiple">
+                    <select size="5" name="postTo" class="postTo" id="postTo" multiple="multiple">
                         <option value="wall">Post to my Wall</option>
                         <?
                             foreach($accounts['data'] as $index => $value){
@@ -73,18 +73,18 @@ $accessToken = $facebook->getAccessToken();
             </tr>
             <tr>
                 <td class="title">Poll Question</td>
-                <td><input type="text" name="question"></td>
+                <td><input type="text" name="question"class="question"></td>
             </tr>
             <tr>
                 <td class="title">Poll Options</td>
                 <td>
-                    <textarea rows="6" name="options" cols="50"></textarea><br />
+                    <textarea rows="6" name="options" class="options" cols="50"></textarea><br />
                     <div class="note font10i">NOTE: Only the first 6 Options will count, ($1) more for every 3 options after that.</div>
                 </td>
             </tr>
             <tr>
                 <td class="title">Button Caption</td>
-                <td><input type="text" name="buttons"></td>
+                <td><input type="text" name="buttons" class="buttons"></td>
             </tr>
             <tr>
                 <td class="title">Poll Settings</td>
