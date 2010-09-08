@@ -7,17 +7,10 @@ body{
     margin:             0px;
     height:             100%;
 }
+
 html{
     height:             100%;
     
-}
-.mainTable{
-    height:             100%;
-    width:              100%;
-    padding:	        0px;
-    margin: 	        0px;
-    border:             0px;
-    border-collapse:    collapse;  
 }
 
 .right{
@@ -32,27 +25,4 @@ html{
 
 .center{
     text-align:         center;
-}
-
-.mainTable thead th{
-    border-bottom:      1px solid #000000;
-}
-
-.mainTable tbody{
-    height:             auto;
-    vertical-align:     top;
-}
-
-.mainTable tbody td{
-    padding-top:        10px;
-}
-
-.mainTable tfoot{
-    border-top:         1px solid #000000;
-    height:             25px;
-}
-
-.mainTable tfoot td{
-    padding-top:        5px;
-    padding-bottom:     5px;
 }
