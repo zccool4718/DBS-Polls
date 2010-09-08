@@ -59,7 +59,7 @@ html{
 
 /* Poll */
 .poll{  
-    border:             1px solid #000000;  
+    border:             1px solid #B3B3B3;  
     padding:	        0px;
     margin: 	        0px;
     width:              100%;
@@ -75,7 +75,7 @@ html{
 }
 
 .poll thead th{
-    border-bottom:      1px solid #000000; 
+    border-bottom:      1px solid #B3B3B3; 
     background-color:   #ffffff;
     
     height:             75px;
