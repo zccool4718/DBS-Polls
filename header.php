@@ -102,4 +102,4 @@ if(!empty($session)) {
     </tr>   
     </thead>
     <tbody>
-        <td colspan="2" class="mainBody font12"> 
+        <td class="mainBody font12"> 

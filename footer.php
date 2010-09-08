@@ -9,7 +9,7 @@
     </td>
         </tbody>
         <tfoot>
-            <td colspan="2" class="mainFoot center font10">
+            <td class="mainFoot center font10">
             <?    
                 $pageGenTime = timer(true);    
                 
