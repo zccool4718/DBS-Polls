@@ -80,7 +80,7 @@ html{
     
 }
 
-.poll tbody title td{
+.poll tbody .title{
     width:              200px;
     padding-left:       15px;
     padding-right:      15px;
