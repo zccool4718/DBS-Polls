@@ -76,7 +76,7 @@ html{
 }
 
 .total{
-    float: right;
+    float: left;
 }
 
 .poll thead th{
