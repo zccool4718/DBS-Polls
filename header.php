@@ -97,7 +97,7 @@ if(!empty($session)) {
 	<thead>
 		<tr>
 		    <th
-			<a href="index.php"> Home </a> | <a href="newPoll.php"> Start a new Poll </a> | <a href=""> Current Polls </a> | <a href=""> Buy Upgrades </a> 
+			<a href="index.php"> Home </a> | <a href="newPoll.php"> Create a Poll </a> | <a href=""> Current Polls </a> | <a href=""> Buy Upgrades </a> 
 		    </th>
 		</tr>   
 	</thead>    

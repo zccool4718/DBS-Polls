@@ -62,7 +62,7 @@ $accessToken = $facebook->getAccessToken();
         </thead>
         <tbody>
             <tr>
-                <td class="title"><br /><br />Post to page/group('s)</td>
+                <td class="title"><br /><br />Post to Page('s) / Group('s)</td>
                 <td>
                 <br /><br />
                     <select size="5" name="postTo" class="postTo" id="postTo" multiple="multiple">
@@ -99,7 +99,7 @@ $accessToken = $facebook->getAccessToken();
                 </td>
             </tr>
             <tr>
-                <td class="title">Paid features</td>
+                <td class="title">Paid Features</td>
                 <td>
                     <input type="checkbox" name="paidOptions" value="pollOpen" /> Make my poll open to anyone, even none facebook people. ($10) <br />
                     <input type="checkbox" name="paidOptions" value="noAds" /> Don't show ad's on my poll page ($5) <br />
