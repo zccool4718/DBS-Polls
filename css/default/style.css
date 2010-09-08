@@ -11,6 +11,7 @@ html{
     
 }
 
+/* General */
 .right{
     text-align:         right;
     padding-right:      10px;
@@ -25,8 +26,51 @@ html{
     text-align:         center;
 }
 
+/* Menu */
+.menu a:link {
+    color:              #4B4B4B;
+    text-decoration:    none;
+}
+         
+.menu a:visited {
+    color:              #4B4B4B;
+    text-decoration:    none;
+} 
+     
+.menu a:hover {
+    color:              #4B4B4B;
+    text-decoration:    none;
+}
+     
+.menu a{
+    color:              #4B4B4B;
+    text-decoration:    none;
+    
+    padding:            0px;
+    margin:             0px;
+    padding-right:      5px;
+    padding-left:       5px;
+}
 
 
+/* Poll */
+.poll{    
+    border-collapse:    collapse;
+    border:             1px;
+    padding:	        0px;
+    margin: 	        0px;    
+}
 
-@import "menu.css";
-@import "poll.css";
+.poll tbody{
+    padding:	        0px;
+    margin: 	        0px;
+    border: 1px;
+    background-color: #F2F2F2;
+}
+
+.poll thead th{
+    padding:	        0px;
+    margin: 	        0px;
+    background-color:   #ffffff;
+    
+}
