@@ -65,7 +65,7 @@ $accessToken = $facebook->getAccessToken();
                 <td class="title"><br /><br />Post to Page('s) / Group('s)</td>
                 <td>
                 <br /><br />
-                    <table width="100%" class="postToTable">
+                    <table class="postToTable">
                         <tr>
                             <td class="postToList">
                                 <select size="5" name="postTo" class="postTo" id="postTo" multiple="multiple">
