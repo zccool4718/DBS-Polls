@@ -55,7 +55,7 @@ $accessToken = $facebook->getAccessToken();
                 <td class="font12b">
                     <label for="total">Total:</label>
                     <input type="text" name="total" class="total" value="Free" disabled="disabled">
-                        <div class="promo font10bi"> All paid features are free for the first week of application lunch.</div>
+                        <div class="promo font10bi"> One random person who buys a full monthy package will win a full yearly package. END's Nov 14, 2010. </div>
                 </td>
                 <th class="font16b"> Create a Poll </th>
             </tr>
@@ -81,7 +81,7 @@ $accessToken = $facebook->getAccessToken();
                                 <input type="checkbox" name="paidOptions" value="postPoll" /> Post this poll on page's wall. <br />
                                 <input type="checkbox" name="paidOptions" value="showFriends" /> Show who voted to everyone. <br />
                                 <hr />                                
-                                <div class="note font10i">NOTE: Only the first 6 Options are free, ($1) for every 3 options after that.</div>
+                                <div class="note font10i"> Get your poll, out there post on your wall.</div>
                             </td>
                         </tr>
                     </table>
