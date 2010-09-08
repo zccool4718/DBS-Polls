@@ -57,7 +57,7 @@ $accessToken = $facebook->getAccessToken();
         </thead>
         <tbody>
             <tr>
-                <td style="title">Post to page/group('s)</td>
+                <td class="title">Post to page/group('s)</td>
                 <td>
                 
                     <select size="5" name="to" id="To" multiple="multiple">
@@ -72,29 +72,29 @@ $accessToken = $facebook->getAccessToken();
                 </td>
             </tr>
             <tr>
-                <td style="title">Poll Question</td>
+                <td class="title">Poll Question</td>
                 <td><input type="text" name="question"></td>
             </tr>
             <tr>
-                <td style="title">Poll Options</td>
+                <td class="title">Poll Options</td>
                 <td>
                     <textarea rows="6" name="options" cols="50"></textarea><br />
                     <div class="note font10i">NOTE: Only the first 6 Options will count, ($1) more for every 3 options after that.</div>
                 </td>
             </tr>
             <tr>
-                <td style="title">Button Caption</td>
+                <td class="title">Button Caption</td>
                 <td><input type="text" name="buttons"></td>
             </tr>
             <tr>
-                <td style="title">Poll Settings</td>
+                <td class="title">Poll Settings</td>
                 <td>                                    
                     <input type="checkbox" name="paidOptions" value="postPoll" /> Post this poll on page's wall. <br />
                     <input type="checkbox" name="paidOptions" value="showFriends" /> Show who voted to everyone. <br />
                 </td>
             </tr>
             <tr>
-                <td style="title">paid options here</td>
+                <td class="title">paid options here</td>
                 <td>
                     <input type="checkbox" name="paidOptions" value="pollOpen" /> Make my poll open to anyone, even none facebook people. ($10) <br />
                     <input type="checkbox" name="paidOptions" value="noAds" /> Don't show ad's on my poll page ($5) <br />
@@ -107,7 +107,7 @@ $accessToken = $facebook->getAccessToken();
                 </td>
             </tr>
             <tr>
-                <td style="title"></td>
+                <td class="title"></td>
                 <td> <button> Submit </button></td>
             </tr>
         </tbody>
