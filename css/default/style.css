@@ -102,20 +102,24 @@ html{
 
 .postTo{
     width:              424px;
+    border-bottom:      1px solid #B3B3B3; 
 }
 
 .question{
     width:              420px;
+    border-bottom:      1px solid #B3B3B3; 
     
 }
 
 .buttons{
     width:              420px;
+    border-bottom:      1px solid #B3B3B3; 
     
 }
 
 
 .options{
+    border-bottom:      1px solid #B3B3B3; 
     
 }
 
