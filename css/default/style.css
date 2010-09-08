@@ -71,11 +71,11 @@ html{
 }
 
 .poll tbody td{
+    width:              300px;
     padding-bottom:     5px;
 }
 
 .poll tbody td div{
-   float: left;
 }
 
 .poll thead th{
