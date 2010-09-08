@@ -63,7 +63,6 @@ html{
     padding:	        0px;
     margin: 	        0px;
     width:              100%;
-    vertical-align:     top;
 }
 
 .poll tbody{
@@ -80,10 +79,12 @@ html{
     
 }
 
-.poll tbody .title{
+.title{
     width:              200px;
     padding-left:       15px;
     padding-right:      15px;
+    
+    vertical-align:     top;
 }
 
 .note{
