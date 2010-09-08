@@ -1,11 +1,11 @@
-.mainTable tbody td poll{
+.poll tbody{
     padding:	        0px;
     margin: 	        0px;
     border: 1px;
     background-color: #F2F2F2;
 }
 
-.mainTable tbody td pollHead{
+.poll thead th{
     padding:	        0px;
     margin: 	        0px;
     background-color:   #ffffff;
