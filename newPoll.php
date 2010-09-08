@@ -67,7 +67,7 @@ $accessToken = $facebook->getAccessToken();
                 <br /><br />
                 <table width="100%">
                     <tr>
-                        <td>
+                        <td with="70%">
                             <select size="5" name="postTo" class="postTo" id="postTo" multiple="multiple">
                                 <option value="wall">Post to my Wall</option>
                                 <?
