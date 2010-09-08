@@ -93,7 +93,10 @@ $accessToken = $facebook->getAccessToken();
                 <td><input type="text" name="question"class="question"></td>
             </tr>
             <tr>
-                <td class="title">Poll Options</td>
+                <td class="title">Poll Options<br />
+                    <div class="note font10i">(one per line).</div>
+                
+                </td>
                 <td>
                     <textarea rows="5" name="options" class="options" cols="50"></textarea><br />
                     <div class="note font10i">NOTE: Only the first 6 Options are free, ($1) for every 3 options after that.</div>
