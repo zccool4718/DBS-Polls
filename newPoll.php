@@ -52,7 +52,7 @@ $accessToken = $facebook->getAccessToken();
     <table width="100%" cellpadding="0" cellspacing="0" class="poll">
         <thead>
             <tr>
-                <th colspan="2" class="font16"> Create a Poll </th>
+                <th colspan="2" class="font20b"> Create a Poll </th>
             </tr>
         </thead>
         <tbody>
