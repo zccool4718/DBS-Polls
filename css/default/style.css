@@ -16,8 +16,10 @@ html{
 }
 
 .footer{
-    border-top:          1px solid #B3B3B3;  
-    margin-top:          20px;
+    width:              100%;
+    border-top:         1px solid #B3B3B3;  
+    margin-top:         20px;
+    text-align:         center;
     
 }
 
