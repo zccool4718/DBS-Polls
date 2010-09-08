@@ -11,6 +11,10 @@ html{
     
 }
 
+.mainBody{
+    border:             1px;
+}
+
 /* General */
 .right{
     text-align:         right;
