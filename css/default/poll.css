@@ -1,3 +1,10 @@
+.poll{    
+    border-collapse:    collapse;
+    border:             1px;
+    padding:	        0px;
+    margin: 	        0px;    
+}
+
 .poll tbody{
     padding:	        0px;
     margin: 	        0px;
