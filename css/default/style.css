@@ -65,14 +65,13 @@ html{
 }
 
 .poll tbody{
-    border-style:       solid;
-    border-color:       #000000;
-    border-bottom:      1px;
     background-color:   #F2F2F2;
 }
 
 .poll thead th{
-    border:             1px solid #000000;
+    border-style:       solid;
+    border-color:       #000000;
+    border-bottom:      1px;
     background-color:   #ffffff;
     
     height:             75px;
