@@ -149,7 +149,8 @@ html{
     
 }
 
-.postToList{  
+.postToList td{  
+    width:              275px;   
     
 }
 
