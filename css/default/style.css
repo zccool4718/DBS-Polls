@@ -102,56 +102,52 @@ html{
 
 .postTo{
     width:              424px;    
-    	background-image:url(images/form_bg.jpg);
-	background-repeat:repeat-x;
-	border:1px solid #d1c7ac;
-	color:#333333;
-	padding:3px;
-	margin-right:4px;
-	margin-bottom:8px;
-	font-family:tahoma, arial, sans-serif;
+    background-image:   url('images/form_bg.jpg');
+    background-repeat:  repeat-x;
+    border:             1px solid #d1c7ac;
+    color:              #333333;
+    padding:            3px;
+    margin-right:       4px;
+    margin-bottom:      8px;
 
 }
 
 .question{
     width:              420px;
     border-bottom:      1px solid #B3B3B3; 
-    	background-image:url(images/form_bg.jpg);
-	background-repeat:repeat-x;
-	border:1px solid #d1c7ac;
-	color:#333333;
-	padding:3px;
-	margin-right:4px;
-	margin-bottom:8px;
-	font-family:tahoma, arial, sans-serif;
+    background-image:   url('images/form_bg.jpg');
+    background-repeat:  repeat-x;
+    border:             1px solid #d1c7ac;
+    color:              #333333;
+    padding:            3px;
+    margin-right:       4px;
+    margin-bottom:      8px;
     
 }
 
 .buttons{
     width:              420px;
     border-bottom:      1px solid #B3B3B3; 
-    	background-image:url(images/form_bg.jpg);
-	background-repeat:repeat-x;
-	border:1px solid #d1c7ac;
-	color:#333333;
-	padding:3px;
-	margin-right:4px;
-	margin-bottom:8px;
-	font-family:tahoma, arial, sans-serif;
+    background-image:   url('images/form_bg.jpg');
+    background-repeat:  repeat-x;
+    border:             1px solid #d1c7ac;
+    color:              #333333;
+    padding:            3px;
+    margin-right:       4px;
+    margin-bottom:      8px;
     
 }
 
 
 .options{
     border-bottom:      1px solid #B3B3B3; 
-    	background-image:url(images/form_bg.jpg);
-	background-repeat:repeat-x;
-	border:1px solid #d1c7ac;
-	color:#333333;
-	padding:3px;
-	margin-right:4px;
-	margin-bottom:8px;
-	font-family:tahoma, arial, sans-serif;
+    background-image:   url('images/form_bg.jpg');
+    background-repeat:  repeat-x;
+    border:             1px solid #d1c7ac;
+    color:              #333333;
+    padding:            3px;
+    margin-right:       4px;
+    margin-bottom:      8px;
     
 }
 
