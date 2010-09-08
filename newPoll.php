@@ -81,7 +81,7 @@ $accessToken = $facebook->getAccessToken();
                                 <input type="checkbox" name="paidOptions" value="postPoll" /> Post this poll on page's wall. <br />
                                 <input type="checkbox" name="paidOptions" value="showFriends" /> Show who voted to everyone. <br />
                                 <hr />                                
-                                <div class="note font10i"> Get your poll, out there post on your wall.</div>
+                                <div class="note font10bi"> Get your poll Notice and post on your wall.</div>
                             </td>
                         </tr>
                     </table>
