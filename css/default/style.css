@@ -15,6 +15,12 @@ html{
     border:             1px;
 }
 
+.footer{
+    border-top:          1px solid #B3B3B3;  
+    margin-top:          20px;
+    
+}
+
 /* General */
 .right{
     text-align:         right;
