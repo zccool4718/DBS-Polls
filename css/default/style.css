@@ -75,7 +75,8 @@ html{
     padding-bottom:     5px;
 }
 
-.poll tbody td div{
+.total{
+    float: right;
 }
 
 .poll thead th{
