@@ -54,7 +54,7 @@ html{
 
 
 /* Poll */
-.poll{    
+.poll table{    
     border:             1px; 
 }
 
@@ -67,6 +67,7 @@ html{
     padding:	        0px;
     margin: 	        0px;
     background-color:   #ffffff;
+    border:             1px;
     
     height:             35px;
     
