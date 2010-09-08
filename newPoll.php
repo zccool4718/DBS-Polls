@@ -46,7 +46,7 @@ $accessToken = $facebook->getAccessToken();
                 "bJQueryUI": true,          
             });   
         });
-    </script>c
+    </script>
     
     
     <table width="100%" cellpadding="0" cellspacing="0" class="poll">
