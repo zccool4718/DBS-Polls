@@ -67,6 +67,7 @@ html{
 
 .poll tbody{
     background-color:   #F2F2F2;
+    color:              #4B4B4B;
 }
 
 .poll tbody td{
@@ -90,6 +91,8 @@ html{
     
     vertical-align:     top;
     color:              #4B4B4B;
+    
+    font-weight:        bold;
 }
 
 .note{
