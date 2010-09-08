@@ -35,10 +35,7 @@ html{
 }
 
 .mainTable thead th{
-    height:             15px;
     border-bottom:      1px solid #000000;
-    border-color:       #000000;
-    background-color:   #C5C3C7;
 }
 
 .mainTable tbody{
