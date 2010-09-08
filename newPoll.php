@@ -55,6 +55,7 @@ $accessToken = $facebook->getAccessToken();
                 <td class="font12b">
                     <label for="total">Total:</label>
                     <input type="text" name="total" class="total" value="Free" disabled="disabled">
+                        <div class="promo font10bi"> All paid features are free for the first week of application lunch.</div>
                 </td>
                 <th class="font16b"> Create a Poll </th>
             </tr>
