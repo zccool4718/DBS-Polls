@@ -139,7 +139,7 @@ html{
     padding-left:       20px;
 }
 
-.postToTable{
+.postToTable td{
     border:      1px solid #B3B3B3; 
     
 }
