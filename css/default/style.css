@@ -144,14 +144,14 @@ html{
     
 }
 
-.postToList td{
-    width:              275px;    
+.postToList{  
     
 }
 
 .postToQuestion{
     text-align:         left;
     vertical-align:     top;
+    width:              175px;  
     
 }
 
