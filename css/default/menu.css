@@ -1,76 +1,21 @@
-.mainMenu a:link {
+.menu a:link {
     color:              #4B4B4B;
     text-decoration:    none;
 }
          
-.mainMenu a:visited {
+.menu a:visited {
     color:              #4B4B4B;
     text-decoration:    none;
 } 
      
-.mainMenu a:hover {
+.menu a:hover {
     color:              #4B4B4B;
     text-decoration:    none;
-    
-    display:            block;
-    background-color:   #ffffff;
-    height:             15px;
-    
-    border-right:       1px solid #000000;
-    border-left:        1px solid #000000;
-    border-top:         1px solid #000000;
-}
-
-.mainMenuSelected{    
-    color:              #4B4B4B;
-    text-decoration:    none;
-    
-    display:            block;
-    background-color:   #ffffff;
-    height:             15px;
-    
-    border-right:       1px solid #000000;
-    border-left:        1px solid #000000;
-    border-top:         1px solid #000000;
 }
      
-.mainMenu{
-    margin:             0px;
-    padding-bottom:     0px;
-}
-     
-.mainMenu a{
+.menu a{
     padding:            0px;
     margin:             0px;
     padding-right:      5px;
     padding-left:       5px;
-}
-
-
-.mainMenu ul{
-    padding:            0px;
-    margin:             0px;
-}
-
-.mainMenu li{
-    text-align:         center;
-    padding:            0px;
-    padding-right:      3px;
-    padding-left:       3px;
-    margin:             0px;
-    margin-right:       3px;
-    margin-left:        3px;
-    display:            block;
-    width:              auto;
-    float:              left;
-    text-decoration:    none;
-    list-style:         none;
-
-}
-
-.right ul{
-    float:              right;
-    padding-top:        0px;
-    padding:            0px;
-    margin:             0px;
 }

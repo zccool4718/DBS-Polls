@@ -96,7 +96,7 @@ if(!empty($session)) {
     <table class="mainTable">
     <thead>
     <tr>
-        <th class=" menu left font12">
+        <th class="menu left font12">
 		<a href="index.php"> Home </a> | <a href="newPoll.php"> Start a new Poll </a> | <a href=""> Current Polls </a> | <a href=""> Buy Upgrades </a> 
         </th>
     </tr>   
