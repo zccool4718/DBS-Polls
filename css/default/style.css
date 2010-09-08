@@ -59,7 +59,7 @@ html{
 
 /* Poll */
 .poll{  
-    border:             1px solid #000000;  
+    border:             0px 0px 0px 1px solid #000000;  
     padding:	        0px;
     margin: 	        0px;
 }
