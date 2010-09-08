@@ -65,9 +65,9 @@ $accessToken = $facebook->getAccessToken();
                 <td class="title"><br /><br />Post to Page('s) / Group('s)</td>
                 <td>
                 <br /><br />
-                <table width="100%">
+                <table width="100%" class="postToTable">
                     <tr>
-                        <td with="70%">
+                        <td class="postToList">
                             <select size="5" name="postTo" class="postTo" id="postTo" multiple="multiple">
                                 <option value="wall">Post to my Wall</option>
                                 <?
@@ -77,7 +77,7 @@ $accessToken = $facebook->getAccessToken();
                                 ?>
                             </select>
                         </td>
-                        <td>                            
+                        <td class="postToQuestion">                            
                             <input type="checkbox" name="paidOptions" value="postPoll" /> Post this poll on page's wall. <br />
                             <input type="checkbox" name="paidOptions" value="showFriends" /> Show who voted to everyone. <br />
                         </td>

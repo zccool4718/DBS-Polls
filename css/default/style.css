@@ -139,6 +139,16 @@ html{
     padding-left:       20px;
 }
 
+.postToList{
+    width:              275px;    
+    
+}
+
+.postToQuestion{
+    text-align:         left;
+    
+}
+
 .postTo{
     width:              275px;    
     background-image:   url('../../images/form_bg.jpg');
