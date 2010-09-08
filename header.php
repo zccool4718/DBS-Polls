@@ -96,10 +96,10 @@ if(!empty($session)) {
     <table with="100%" class="mainTable" cellpadding="0" cellspacing="0">
     <thead>
     <tr>
-        <th class="menu font12">
+        <th class="menu">
 		<a href="index.php"> Home </a> | <a href="newPoll.php"> Start a new Poll </a> | <a href=""> Current Polls </a> | <a href=""> Buy Upgrades </a> 
         </th>
     </tr>   
     </thead>
     <tbody>
-        <td class="mainBody font12"> 
+        <td class="mainBody"> 
