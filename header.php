@@ -93,13 +93,12 @@ if(!empty($session)) {
 </head>
 <body>
     
-    <table with="100%" class="mainTable" cellpadding="0" cellspacing="0">
-    <thead>
-    <tr>
-        <th class="menu">
-		<a href="index.php"> Home </a> | <a href="newPoll.php"> Start a new Poll </a> | <a href=""> Current Polls </a> | <a href=""> Buy Upgrades </a> 
-        </th>
-    </tr>   
-    </thead>
-    <tbody>
-        <td class="mainBody"> 
+    <table with="100%" class="header" cellpadding="0" cellspacing="0">
+	<thead>
+		<tr>
+		    <th
+			<a href="index.php"> Home </a> | <a href="newPoll.php"> Start a new Poll </a> | <a href=""> Current Polls </a> | <a href=""> Buy Upgrades </a> 
+		    </th>
+		</tr>   
+	</thead>    
+    </table>

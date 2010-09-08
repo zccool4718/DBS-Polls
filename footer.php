@@ -6,9 +6,9 @@
  */
 
 ?>
-    </td>
-        </tbody>
-        <tfoot>
+
+    <table with="100%" class="footer" cellpadding="0" cellspacing="0">
+        <tbody>
             <td class="mainFoot center font10">
             <?    
                 $pageGenTime = timer(true);    
@@ -20,7 +20,7 @@
             
             ?>
             </td>
-        </tfoot>
+        </tbody>
     </table>
 </body>
 </html>
