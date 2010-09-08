@@ -101,8 +101,8 @@ html{
 }
 
 .postTo{
-    width:              424px;    
-    background-image:   url('images/form_bg.jpg');
+    width:              425px;    
+    background-image:   url('../../images/form_bg.jpg');
     background-repeat:  repeat-x;
     border:             1px solid #d1c7ac;
     color:              #333333;
@@ -115,7 +115,7 @@ html{
 .question{
     width:              420px;
     border-bottom:      1px solid #B3B3B3; 
-    background-image:   url('images/form_bg.jpg');
+    background-image:   url('../../images/form_bg.jpg');
     background-repeat:  repeat-x;
     border:             1px solid #d1c7ac;
     color:              #333333;
@@ -128,7 +128,7 @@ html{
 .buttons{
     width:              420px;
     border-bottom:      1px solid #B3B3B3; 
-    background-image:   url('images/form_bg.jpg');
+    background-image:   url('../../images/form_bg.jpg');
     background-repeat:  repeat-x;
     border:             1px solid #d1c7ac;
     color:              #333333;
@@ -141,7 +141,7 @@ html{
 
 .options{
     border-bottom:      1px solid #B3B3B3; 
-    background-image:   url('images/form_bg.jpg');
+    background-image:   url('../../images/form_bg.jpg');
     background-repeat:  repeat-x;
     border:             1px solid #d1c7ac;
     color:              #333333;
