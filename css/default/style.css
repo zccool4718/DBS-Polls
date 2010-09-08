@@ -75,7 +75,7 @@ html{
 }
 
 .poll tbody td div{
-   float: right;
+   float: left;
 }
 
 .poll thead th{
