@@ -46,10 +46,10 @@ $accessToken = $facebook->getAccessToken();
                 "bJQueryUI": true,          
             });   
         });
-    </script>
+    </script>c
     
     
-    <table width="100%" class="poll">
+    <table width="100%" cellpadding="0" cellspacing="0" class="poll">
         <thead>
             <tr>
                 <th colspan="2"> Create a Poll </th>
