@@ -74,6 +74,10 @@ html{
     padding-bottom:     5px;
 }
 
+.poll tbody td div{
+    flot:               right;
+}
+
 .poll thead th{
     border-bottom:      1px solid #B3B3B3; 
     background-color:   #ffffff;
