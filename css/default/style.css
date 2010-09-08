@@ -79,9 +79,10 @@ html{
 }
 
 .title{
-    width:              100px;
+    width:              150px;
     padding-left:       15px;
     padding-right:      15px;
+    vertical-align:     top;
 }
 
 .note{
