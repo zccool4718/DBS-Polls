@@ -57,9 +57,9 @@ $accessToken = $facebook->getAccessToken();
         </thead>
         <tbody>
             <tr>
-                <td class="title">Post to page/group('s)</td>
+                <td class="title"><br /><br />Post to page/group('s)</td>
                 <td>
-                
+                <br /><br />
                     <select size="5" name="postTo" class="postTo" id="postTo" multiple="multiple">
                         <option value="wall">Post to my Wall</option>
                         <?
@@ -72,8 +72,8 @@ $accessToken = $facebook->getAccessToken();
                 </td>
             </tr>
             <tr>
-                <td class="title"><br /><br />Poll Question</td>
-                <td><br /><br /><input type="text" name="question"class="question"></td>
+                <td class="title">Poll Question</td>
+                <td><input type="text" name="question"class="question"></td>
             </tr>
             <tr>
                 <td class="title">Poll Options</td>
