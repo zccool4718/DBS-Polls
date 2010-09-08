@@ -77,3 +77,15 @@ html{
     padding-right:      15px;
     
 }
+
+.title{
+    width:              100px;
+    padding-left:       15px;
+    padding-right:      15px;
+}
+
+.note{
+    width:              100px;
+    padding-left:       15px;
+    padding-right:      15px;
+}
