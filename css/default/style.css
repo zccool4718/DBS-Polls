@@ -153,7 +153,7 @@ html{
     
 }
 
-.postToQuestion td{
+.postToQuestion{
     width:              275px;   
     text-align:         left;
     vertical-align:     top;
