@@ -65,7 +65,7 @@ html{
     border:             1px; 
 }
 
-.poll tbody tr{
+.poll tbody{
     border:             1px solid #000000;
     background-color:   #F2F2F2;
 }
