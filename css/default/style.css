@@ -76,8 +76,8 @@ html{
 }
 
 .total{
-    float: left;
-    padding-left: 40px;
+    float: right;
+    margin-right: auto;
 }
 
 .poll thead th{
