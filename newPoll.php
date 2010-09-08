@@ -72,8 +72,8 @@ $accessToken = $facebook->getAccessToken();
                 </td>
             </tr>
             <tr>
-                <td class="title">Poll Question</td>
-                <td><input type="text" name="question"class="question"></td>
+                <td class="title"><br /><br />Poll Question</td>
+                <td><br /><br /><input type="text" name="question"class="question"></td>
             </tr>
             <tr>
                 <td class="title">Poll Options</td>
