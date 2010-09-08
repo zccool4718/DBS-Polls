@@ -139,6 +139,11 @@ html{
     padding-left:       20px;
 }
 
+.postToTable{
+    width:              375px;  
+    border:      1px solid #B3B3B3; 
+    
+}
 .postToTable td{
     border:      1px solid #B3B3B3; 
     
@@ -148,10 +153,9 @@ html{
     
 }
 
-.postToQuestion td{
+.postToQuestion{
     text-align:         left;
     vertical-align:     top;
-    width:              375px;  
     
 }
 
