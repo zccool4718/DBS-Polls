@@ -56,20 +56,23 @@ $accessToken = $facebook->getAccessToken();
    {
      method: 'stream.publish',
      message: 'getting educated about Facebook Connect',
-     attachment: {
-       name: 'Connect',
-       caption: 'The Facebook Connect JavaScript SDK',
-       description: (
-         'A small JavaScript library that allows you to harness ' +
-         'the power of Facebook, bringing the user\'s identity, ' +
-         'social graph and distribution power to your site.'
-       ),
-       href: 'http://github.com/facebook/connect-js'
-     },
      action_links: [
        { text: 'Code', href: 'http://github.com/facebook/connect-js' }
      ],
-     user_message_prompt: 'Share your thoughts about Connect'
+     attachment: {
+       name: 'Connect',
+       caption: '<b> What one do you pick? </b>',
+       description: (
+         '<a href="testing.php"> Question 1 </a> ' +
+         '<a href="testing.php"> Question 2 </a> ' +
+         '<a href="testing.php"> Question 3 </a> ' +
+         '<a href="testing.php"> Question 4 </a> ' +
+         '<a href="testing.php"> Question 5 </a> '+
+         '<a href="testing.php"> Question 8 </a> '
+       ),
+       href: 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'
+     },
+     user_message_prompt: 'Share your poll'
    },
    function(response) {
      if (response && response.post_id) {
