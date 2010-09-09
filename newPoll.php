@@ -69,7 +69,9 @@ $accessToken = $facebook->getAccessToken();
                 if($('#allMonth').is(':checked')){
                     price = price + 50.00;
                 }
-                $('#total').val("$"+price+".00");
+                if(price != 0){
+                    $('#total').val("$"+price+".00");                    
+                }
             });
         });
     </script>
