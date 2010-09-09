@@ -63,10 +63,10 @@ $accessToken = $facebook->getAccessToken();
         caption: '<b> What one do you pick? </b>'
         properties: { 
             '1': { 'text': 'Answer 1 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
-            '2': { 'text': 'Answer 2 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'} 
-            '3': { 'text': 'Answer 3 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'} 
-            '4': { 'text': 'Answer 4 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'} 
-            '5': { 'text': 'Answer 5 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}
+            '2': { 'text': 'Answer 2 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
+            '3': { 'text': 'Answer 3 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
+            '4': { 'text': 'Answer 4 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
+            '5': { 'text': 'Answer 5 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'},
             '6': { 'text': 'Answer 6 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}
         }
     },
