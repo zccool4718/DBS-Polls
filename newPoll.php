@@ -55,8 +55,8 @@ $accessToken = $facebook->getAccessToken();
                     price = price + 5.00;
                 }
             });
-            
-                $('#total').val() = "$"+price;
+            alert($('#total').val() );
+            $('#total').val() = "$"+price;
         });
     </script>
     
