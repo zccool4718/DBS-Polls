@@ -56,10 +56,11 @@ $accessToken = $facebook->getAccessToken();
             $('#PollSubmit').bind('click', function(){
                 var price = 0;                
                 var params = {};
-                
+                var count = 0;
                 $('#paidOptions').find(':input').each(function(){
                     if($(this).is(':checked')){
-                        params['id'] = $(this).val();
+                        params['id'][] = $(this).val();
+                        count++;
                         if(parseFloat($(this).attr("alt")) > 10){                            
                             price = parseFloat($(this).attr("alt"));
                         } else {
