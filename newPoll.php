@@ -88,8 +88,11 @@ $accessToken = $facebook->getAccessToken();
                 
                 $('#paidOptions').find(':input').each(function(){
                     if($(this).is(':checked')){
-                      //  alert(parseFloat($(this).attr("alt")));
-                        price = price + parseFloat($(this).attr("alt"));
+                        if(parseFloat($(this).attr("alt") > 10){                            
+                            price = parseFloat($(this).attr("alt"));
+                        } else {
+                            price = price + parseFloat($(this).attr("alt"));
+                        }
                     }
                 });
                 
