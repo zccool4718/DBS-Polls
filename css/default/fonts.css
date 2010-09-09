@@ -114,6 +114,13 @@
     font-family:	"Verdana","Times New Roman",Georgia,Serif;
 }
 
+.font8bi{    
+    font-size:		8px;
+    font-style:         italic;
+    font-weight:        bolder;
+    font-family:	"Verdana","Times New Roman",Georgia,Serif;
+}
+
 .font10bi{    
     font-size:		10px;
     font-style:         italic;

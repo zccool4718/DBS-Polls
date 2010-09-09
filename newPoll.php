@@ -55,7 +55,7 @@ $accessToken = $facebook->getAccessToken();
                 <td class="font12b">
                     <label for="total">Total:</label>
                     <input type="text" name="total" class="total" value="Free" disabled="disabled">
-                        <div class="promo font10bi"> One random person who buys a full monthy package will win a full yearly package. END's Nov 14, 2010. </div>
+                        <div class="promo font8bi"> One random person who buys a full monthy package will win a full yearly package. END's Nov 14, 2010. </div>
                 </td>
                 <th class="font16b"> Create a Poll </th>
             </tr>
