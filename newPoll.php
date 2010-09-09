@@ -47,6 +47,7 @@ $accessToken = $facebook->getAccessToken();
             });
             
             $('#PollSubmit').bind('click', function(){
+                    alert("clicked");
                 if($('#pollOpen').is(':checked')){
                 
                     alert($('#pollOpen').val());
