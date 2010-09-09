@@ -51,8 +51,11 @@ $accessToken = $facebook->getAccessToken();
                 "bJQueryUI": true,          
             });
             FB.ui({
-                method: 'stream.share',
-                message: 'Check out this great app! http://apps.facebook.com/{your_app}'
+                method: 'stream.publish',
+                name: 'I just made a new poll from DBS Polls.',
+                href: 'http://apps.facebook.com/dbspolls',
+                caption: 'Lets see if we can do more than one line here. <br /> Here goes line number 2 maybe? <br \> Line 3?',
+                media: [ {'type' : 'image', 'src' : 'http://apps.facebook.com/dbspolls/images/copy.png', 'href' : 'http://apps.facebook.com/dbspolls'}]
             });
             $('#PollSubmit').bind('click', function(){
                 var price = 0;
