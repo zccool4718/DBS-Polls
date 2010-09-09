@@ -71,6 +71,11 @@ $accessToken = $facebook->getAccessToken();
          '<a href="testing.php"> Question 5 </a> '+
          '<a href="testing.php"> Question 8 </a> '
        ),
+    properties: { 
+        'Answer 1': { 'text': 'Answer 11 ', 'href': 'http://bit.ly/KYbaN'}, 
+        'Answer 2': { 'text': 'Answer 22 ', 'href': 'http://bit.ly/KYbaN'}
+    }, 
+
        href: 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'
      },
      user_message_prompt: 'Share your poll'
