@@ -65,7 +65,7 @@ $accessToken = $facebook->getAccessToken();
         <thead>
             <tr>
                 <td class="font12b">
-                    Total: <input type="text" id="totalPrice" name="totalPrice" class="totalPrice" value="Free" width="30px">
+                    Total: <input type="text" id="totalPrice" name="totalPrice" class="totalPrice" value="Free" style="width: 30px;">
                         <div class="promo"> One random person who buys a full monthy package will win a full yearly package. END's Nov 14, 2010. </div>
                 </td>
                 <th class="font16b"> Create a Poll </th>
