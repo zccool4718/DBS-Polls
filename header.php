@@ -36,17 +36,15 @@ if(!empty($session)) {
             $sql = "SELECT * FROM users WHERE oauth_provider = 'facebook' AND oauth_uid = ". $user['id'];
             $result = $database->query($sql);
 	    
-            if(count($result) == 0){
+	    if($results['active'] == 0){
+                $sql = "UPDATE users SET active = 1 WHERE oauth_uid = '" . $user['id'] . "'";
+                $database->Execuite($sql);
+            } else if(count($result) == 0){
                 $sql = "INSERT INTO users (oauth_provider, oauth_uid, username, active, timeStamp) VALUES ('facebook', {$user['id']}, '{$user['name']}', 1, null)";
                // print_r($sql);
                 $database->Execuite($sql);
                 $sql = "SELECT * FROM users WHERE id = " . mysql_insert_id();
                 $result = $database->query($sql);
-            }
-            
-            if($results['active'] == 0){
-                $sql = "UPDATE users SET active = 1 WHERE oauth_uid = '" . $user['id'] . "'";
-                $database->Execuite($sql);
             }
             
             $_SESSION['id'] = $result['id'];
