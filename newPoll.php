@@ -60,8 +60,8 @@ $accessToken = $facebook->getAccessToken();
        { text: 'Code', href: 'http://github.com/facebook/connect-js' }
      ],
      attachment: {
-        'properties' : {{'text' : 'pets', 'href' : 'http://www.youtube.com/browse?s=mp&t=t&c=15'}},
-                        
+                       
+        properties : {{'text' : 'Answer 1', 'href' : 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}}, 
        name: 'Connect',
        caption: '<b> What one do you pick? </b>',
        description: (
