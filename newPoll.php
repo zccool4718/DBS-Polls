@@ -56,10 +56,10 @@ $accessToken = $facebook->getAccessToken();
             $('#PollSubmit').bind('click', function(){
                 var price = 0;                
                 var params = {};
-                params['id'] = "";
+                
                 $('#paidOptions').find(':input').each(function(){
                     if($(this).is(':checked')){
-                        params['id'] = params['id'] + " " + $(this).val();
+                        params['id'][] = $(this).val();
                         if(parseFloat($(this).attr("alt")) > 10){                            
                             price = parseFloat($(this).attr("alt"));
                         } else {
@@ -79,7 +79,7 @@ $accessToken = $facebook->getAccessToken();
 		params['userID'] = '<?=$uid?>';
 		params['question'] = $('#question').val();
 		params['postTo'] = $('#postTo').val();
-                if($('#postPoll')).is(':checked')){
+                if($('#postPoll').is(':checked')){
                     params['postPoll'] = $('#postPoll').val();
                 }
 		params['options'] = $('#options').val();
