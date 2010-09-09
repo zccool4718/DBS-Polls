@@ -64,7 +64,11 @@ $accessToken = $facebook->getAccessToken();
                     price = price + 2.00;
                 }
                 if($('#all').is(':checked')){
-                    price = price + 15.00;
+                    $('#pollOpen').attr("checked", false);
+                    $('#noAds').attr("checked", false);
+                    $('#manyVotes').attr("checked", false);
+                    $('#differentTime').attr("checked", false);
+                    price = 15.00;
                 }
                 if($('#allMonth').is(':checked')){
                     price = price + 50.00;
