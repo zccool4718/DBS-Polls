@@ -31,7 +31,7 @@ $sql = "INSERT INTO poll values(null, '".$_POST['userID']."',
                                       '".$_POST['question']."',
                                       '".serialize($_POST['options'])."',
                                       '".$_POST['buttons']."'
-                                      '".serialize($_POST['paidFeatures'])."')";
+                                      '".serialize($_POST['id'])."')";
 $database->Execuite($sql);
 
 print_r($_POST);
