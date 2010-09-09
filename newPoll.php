@@ -50,13 +50,34 @@ $accessToken = $facebook->getAccessToken();
                 "sPaginationType": "full_numbers",					
                 "bJQueryUI": true,          
             });
-            FB.ui({
-                method: 'stream.publish',
-                name: 'I just made a new poll from DBS Polls.',
-                href: 'http://apps.facebook.com/dbspolls',
-                caption: 'Lets see if we can do more than one line here. <br /> Here goes line number 2 maybe? <br \> Line 3?',
-                media: [ {'type' : 'image', 'src' : 'http://apps.facebook.com/dbspolls/images/copy.png', 'href' : 'http://apps.facebook.com/dbspolls'}]
-            });
+   FB.ui(
+   {
+     method: 'stream.publish',
+     message: 'getting educated about Facebook Connect',
+     target_id:'123456879',
+     attachment: {
+       name: 'Connect',
+       caption: 'The Facebook Connect JavaScript SDK',
+       description: (
+         'A small JavaScript library that allows you to harness ' +
+         'the power of Facebook, bringing the user\'s identity, ' +
+         'social graph and distribution power to your site.'
+       ),
+       href: 'http://github.com/facebook/connect-js'
+     },
+     action_links: [
+       { text: 'Code', href: 'http://github.com/facebook/connect-js' }
+     ],
+     user_message_prompt: 'Share your thoughts about Connect'
+   },
+   function(response) {
+     if (response && response.post_id) {
+       alert('Post was published.');
+     } else {
+       alert('Post was not published.');
+     }
+   }
+);
             $('#PollSubmit').bind('click', function(){
                 var price = 0;
                 if($('#pollOpen').is(':checked')){
