@@ -50,11 +50,12 @@ $accessToken = $facebook->getAccessToken();
                 "sPaginationType": "full_numbers",					
                 "bJQueryUI": true,          
             });
-   FB.ui(
+            
+            
+ FB.ui(
    {
      method: 'stream.publish',
      message: 'getting educated about Facebook Connect',
-     target_id:'123456879',
      attachment: {
        name: 'Connect',
        caption: 'The Facebook Connect JavaScript SDK',
@@ -77,7 +78,10 @@ $accessToken = $facebook->getAccessToken();
        alert('Post was not published.');
      }
    }
-);
+ );
+
+            
+            
             $('#PollSubmit').bind('click', function(){
                 var price = 0;
                 if($('#pollOpen').is(':checked')){
