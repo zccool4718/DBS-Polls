@@ -59,7 +59,7 @@ $accessToken = $facebook->getAccessToken();
                 var count = 0;
                 $('#paidOptions').find(':input').each(function(){
                     if($(this).is(':checked')){
-                        params['id'][] = $(this).val();
+                        params['id'][count] = $(this).val();
                         count++;
                         if(parseFloat($(this).attr("alt")) > 10){                            
                             price = parseFloat($(this).attr("alt"));
