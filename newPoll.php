@@ -41,15 +41,11 @@ $accessToken = $facebook->getAccessToken();
 ?>
     <script type="text/javascript">
         window.fbAsyncInit = function() {
-            FB.init({appId: 'your app id', status: true, cookie: true,
+            FB.init({appId: '<?=$fbconfig['app_ID']?>', status: true, cookie: true,
             xfbml: true});
         };
         
-        $(document).ready(function(){
-            var e = document.createElement('script'); e.async = true;
-            e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
-            document.getElementById('fb-root').appendChild(e);
-            
+        $(document).ready(function(){            
             $('.dataTable').dataTable({			
                 "sPaginationType": "full_numbers",					
                 "bJQueryUI": true,          
