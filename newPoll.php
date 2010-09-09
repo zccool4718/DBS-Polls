@@ -47,7 +47,7 @@ $accessToken = $facebook->getAccessToken();
             });
             
             
-            $('#pollOpen').bind('click', function(){
+            $('#pollOpen').change(function(){
                 alert(this.val());
             })
         });
