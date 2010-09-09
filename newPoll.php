@@ -59,8 +59,6 @@ FB.ui({
         { text: 'Code', href: 'http://github.com/facebook/connect-js' }
     ],
     attachment: {                       
-        name: 'Connect', 
-        href: 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423',
         user_message_prompt: 'Share your poll',
         caption: '<b> What one do you pick? </b>',
         properties: { 
