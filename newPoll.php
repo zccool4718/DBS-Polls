@@ -54,7 +54,7 @@ $accessToken = $facebook->getAccessToken();
                 if($('#noAds').is(':checked')){
                     price = price + 5.00;
                 }
-                $('#total').val() = "$"+price;
+                $('#totalPrice').val() = "$"+price;
             });
             
         });
@@ -65,7 +65,7 @@ $accessToken = $facebook->getAccessToken();
         <thead>
             <tr>
                 <td class="font12b">
-                    Total: <input type="text" id="total" class="total" value="Free">
+                    Total: <input type="text" id="totalPrice" name="totalPrice" class="totalPrice" value="Free">
                         <div class="promo"> One random person who buys a full monthy package will win a full yearly package. END's Nov 14, 2010. </div>
                 </td>
                 <th class="font16b"> Create a Poll </th>
