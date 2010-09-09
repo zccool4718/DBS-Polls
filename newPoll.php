@@ -47,7 +47,7 @@ $accessToken = $facebook->getAccessToken();
             });
             
             
-            $('#paidOptions').bind('change', function(){
+            $('#pollOpen').bind('change', function(){
                 alert(this.val());
             })
         });
@@ -82,8 +82,8 @@ $accessToken = $facebook->getAccessToken();
                                 </select>
                             </td>
                             <td class="postToQuestion font10bi">                            
-                                <input type="checkbox" name="paidOptions" value="postPoll" /> Post this poll on page's wall. <br />
-                                <input type="checkbox" name="paidOptions" value="showFriends" /> Show who voted to everyone. <br />
+                                <input type="checkbox" name="postPoll" value="postPoll" /> Post this poll on page's wall. <br />
+                                <input type="checkbox" name="showFriends" value="showFriends" /> Show who voted to everyone. <br />
                                 <hr />                                
                                 <div class="note font10bi"> Get your poll notice and post on your wall.</div>
                             </td>
@@ -113,14 +113,14 @@ $accessToken = $facebook->getAccessToken();
             <tr>
                 <td class="title">Paid Features</td>
                 <td>
-                    <input type="checkbox" name="paidOptions" value="pollOpen" /> Open this poll to non Facebook users. ($10) <br />
-                    <input type="checkbox" name="paidOptions" value="noAds" /> Don't show ad's on my poll page. ($5) <br />
-                    <input type="checkbox" name="paidOptions" value="anyComment" /> Let non facebook people post comments. ($2) <br />
-                    <input type="checkbox" name="paidOptions" value="differentTime" /> Let users vote as many times as they wish. ($2)</div><br />
-                    <input type="checkbox" name="paidOptions" value="differentTime" /> Let my poll run different length of time than the default. ($2)</div><br />
+                    <input type="checkbox" name="pollOpen" value="pollOpen" /> Open this poll to non Facebook users. ($10) <br />
+                    <input type="checkbox" name="noAds" value="noAds" /> Don't show ad's on my poll page. ($5) <br />
+                    <input type="checkbox" name="anyComment value="anyComment" /> Let non facebook people post comments. ($2) <br />
+                    <input type="checkbox" name="manyVotes" value="manyVotes" /> Let users vote as many times as they wish. ($2)</div><br />
+                    <input type="checkbox" name="differentTime" value="differentTime" /> Let my poll run different length of time than the default. ($2)</div><br />
                     <div class="note font10i">NOTE: The default time is 5 days.</div> <br />
-                    <input type="checkbox" name="paidOptions" value="all" /> Full Package ($15) savings of ($6) dollars. <br />
-                    <input type="checkbox" name="paidOptions" value="allMonth" /> Monthy Full Package. ($50) <br />
+                    <input type="checkbox" name="all" value="all" /> Full Package ($15) savings of ($6) dollars. <br />
+                    <input type="checkbox" name="allMonth" value="allMonth" /> Monthy Full Package. ($50) <br />
                 </td>
             </tr>
             <tr>
