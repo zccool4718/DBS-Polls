@@ -71,6 +71,8 @@ $accessToken = $facebook->getAccessToken();
                 }
                 if(price != 0){
                     $('#total').val("$"+price+".00");                    
+                } else {
+                    $('#total').val("Free"); 
                 }
             });
         });
