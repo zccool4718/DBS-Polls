@@ -55,11 +55,14 @@ $accessToken = $facebook->getAccessToken();
  FB.ui(
    {
      method: 'stream.publish',
-     message: 'getting educated about Facebook Connect',
+     message: 'I just made a new pool at DBS Polls, why don\'t you take it.',
      action_links: [
        { text: 'Code', href: 'http://github.com/facebook/connect-js' }
      ],
      attachment: {
+        'properties' : {{'text' : 'pets', 'href' : 'http://www.youtube.com/browse?s=mp&t=t&c=15'}},
+        'properties' : {{'text' : 'pets', 'href' : 'http://www.youtube.com/browse?s=mp&t=t&c=15'}},
+                        
        name: 'Connect',
        caption: '<b> What one do you pick? </b>',
        description: (
