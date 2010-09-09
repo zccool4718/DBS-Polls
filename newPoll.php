@@ -40,6 +40,7 @@ $accessToken = $facebook->getAccessToken();
 
 ?>
     <script type="text/javascript">
+                var price = 0;
         $(document).ready(function(){
             $('.dataTable').dataTable({			
                 "sPaginationType": "full_numbers",					
@@ -47,16 +48,15 @@ $accessToken = $facebook->getAccessToken();
             });
             
             $('#PollSubmit').bind('click', function(){
-                var price = 0;
                 if($('#pollOpen').is(':checked')){
                     price = price + 10.00;
                 }
                 if($('#noAds').is(':checked')){
                     price = price + 5.00;
                 }
-                $('.totalPrice').val() = "$"+price;
             });
             
+                $('#total').val() = "$"+price;
         });
     </script>
     
@@ -65,7 +65,7 @@ $accessToken = $facebook->getAccessToken();
         <thead>
             <tr>
                 <td class="font12b">
-                    Total: <input type="text" id="totalPrice" name="totalPrice" class="totalPrice" value="Free" style="width: 60px;">
+                    Total: <input type="text" id="total" name="total" class="total" value="Free" style="width: 60px;">
                         <div class="promo"> One random person who buys a full monthy package will win a full yearly package. END's Nov 14, 2010. </div>
                 </td>
                 <th class="font16b"> Create a Poll </th>
