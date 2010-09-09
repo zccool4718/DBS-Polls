@@ -52,42 +52,14 @@ $accessToken = $facebook->getAccessToken();
                 "sPaginationType": "full_numbers",					
                 "bJQueryUI": true,          
             });            
-            
-            //FB.ui({
-            //    method: 'stream.publish',
-            //    message: 'I just made a new pool at DBS Polls, why don\'t you take it.',
-            //    action_links: [
-            //        { text: 'Take Poll', href: 'http://pollsystem.dbscode.com/newPoll.php' },
-            //        { text: 'Make your Own poll', href: 'http://pollsystem.dbscode.com/newPoll.php' }
-            //    ],
-            //    attachment: {                       
-            //        user_message_prompt: 'Share your poll',
-            //        caption: '<b> What one do you pick? </b>',
-            //        properties: { 
-            //            '1': { 'text': 'Answer 1 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
-            //            '2': { 'text': 'Answer 2 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
-            //            '3': { 'text': 'Answer 3 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
-            //            '4': { 'text': 'Answer 4 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
-            //            '5': { 'text': 'Answer 5 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'},
-            //            '6': { 'text': 'Answer 6 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}
-            //        }
-            //    }
-            //    },
-            //    function(response) {
-            //        if (response && response.post_id) {
-            //            alert('Post was published.');
-            //        } else {
-            //            alert('Post was not published.');
-            //        }
-            //    }
-            //);            
-            
+
             $('#PollSubmit').bind('click', function(){
                 var price = 0;                
                 var params = {};
                 
                 $('#paidOptions').find(':input').each(function(){
                     if($(this).is(':checked')){
+                        params['id'] = $(this).val();
                         if(parseFloat($(this).attr("alt")) > 10){                            
                             price = parseFloat($(this).attr("alt"));
                         } else {
@@ -98,23 +70,60 @@ $accessToken = $facebook->getAccessToken();
                 
                 if(price != 0){
                     $('#total').val("$"+price);                    
+                    params['price'] = price;
                 } else {
-                    $('#total').val("Free"); 
+                    $('#total').val("Free");                
+                    params['price'] = 0;
                 }    
 		
-		//params['toggleID'] = $(this).attr("alt");
-		//params['userID'] = '<?=$_SESSION['UserID']?>';
-		//params['action'] = "undeleteToggle";
-		//return $.ajax({
-		//    type: "POST",
-		//    url: "toggle_ajax.php",
-		//    data: params,
-		//    async: false,
-		//    dataType: 'html',
-		//    success: function(output){
-		//	window.location.reload( false );
-		//    }
-		//});  
+		params['userID'] = '<?=$uid?>';
+		params['question'] = $('#question').val();
+		params['postTo'] = $('#postTo').val();
+		params['postPoll'] = $('#postPoll').val();
+		params['options'] = $('#options').val();
+		params['buttons'] = $('#buttons').val();
+		return $.ajax({
+		    type: "POST",
+		    url: "ajax.php",
+		    data: params,
+		    dataType: 'html',
+		    success: function(output){
+                        
+                        alert(output);
+                        
+                        
+                        //
+                        //FB.ui({
+                        //    method: 'stream.publish',
+                        //    message: 'I just made a new pool at DBS Polls, why don\'t you take it.',
+                        //    action_links: [
+                        //        { text: 'Take Poll', href: 'http://pollsystem.dbscode.com/newPoll.php' },
+                        //        { text: 'Make your Own poll', href: 'http://pollsystem.dbscode.com/newPoll.php' }
+                        //    ],
+                        //    attachment: {                       
+                        //        user_message_prompt: 'Share your poll',
+                        //        caption: '<b> What one do you pick? </b>',
+                        //        properties: { 
+                        //            '1': { 'text': 'Answer 1 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
+                        //            '2': { 'text': 'Answer 2 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
+                        //            '3': { 'text': 'Answer 3 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
+                        //            '4': { 'text': 'Answer 4 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
+                        //            '5': { 'text': 'Answer 5 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'},
+                        //            '6': { 'text': 'Answer 6 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}
+                        //        }
+                        //    }
+                        //    },
+                        //    function(response) {
+                        //        if (response && response.post_id) {
+                        //            alert('Post was published.');
+                        //        } else {
+                        //            alert('Post was not published.');
+                        //        }
+                        //    }
+                        //);
+                        //
+		    }
+		});  
                 
             });
         });
@@ -149,8 +158,7 @@ $accessToken = $facebook->getAccessToken();
                                 </select>
                             </td>
                             <td class="postToQuestion font10bi">                            
-                                <input type="checkbox" name="postPoll" value="postPoll" /> Post this poll on page's wall. <br />
-                                <input type="checkbox" name="showFriends" value="showFriends" /> Show who voted to everyone. <br />
+                                <input type="checkbox" id="postPoll" value="postPoll" /> Post this poll on page's wall. <br />
                                 <hr />                                
                                 <div class="note font10bi"> Get your poll notice and post on your wall.</div>
                             </td>
@@ -161,7 +169,7 @@ $accessToken = $facebook->getAccessToken();
             </tr>
             <tr>
                 <td class="title">Poll Question</td>
-                <td><input type="text" name="question"class="question"></td>
+                <td><input type="text" id="question"class="question"></td>
             </tr>
             <tr>
                 <td class="title">Poll Options<br />
@@ -169,13 +177,13 @@ $accessToken = $facebook->getAccessToken();
                 
                 </td>
                 <td>
-                    <textarea rows="5" name="options" class="options" cols="50"></textarea><br />
+                    <textarea rows="5" id="options" class="options" cols="50"></textarea><br />
                     <div class="note font10i">NOTE: Only the first 6 Options are free, ($1) for every 3 options after that.</div>
                 </td>
             </tr>
             <tr>
                 <td class="title">Button Caption</td>
-                <td><input type="text" name="buttons" class="buttons"></td>
+                <td><input type="text" id="buttons" class="buttons"></td>
             </tr>
             <tr>
                 <td class="title">Paid Features</td>
