@@ -47,9 +47,12 @@ $accessToken = $facebook->getAccessToken();
             });
             
             $('#PollSubmit').bind('click', function(){
-                    alert("clicked");
                 if($('#pollOpen').is(':checked')){
-                
+                    $('#id').val() = $('#id').val() + 10.00;
+                    alert($('#pollOpen').val());
+                }
+                if($('#noAds').is(':checked')){
+                    $('#id').val() = $('#id').val() + 5.00;
                     alert($('#pollOpen').val());
                 }
             });
@@ -62,7 +65,7 @@ $accessToken = $facebook->getAccessToken();
         <thead>
             <tr>
                 <td class="font12b">
-                    Total: <input type="text" name="total" class="total" value="Free" disabled="disabled">
+                    Total: <input type="text" id="total" class="total" value="Free" disabled="disabled">
                         <div class="promo"> One random person who buys a full monthy package will win a full yearly package. END's Nov 14, 2010. </div>
                 </td>
                 <th class="font16b"> Create a Poll </th>
