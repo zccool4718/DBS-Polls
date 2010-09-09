@@ -61,7 +61,6 @@ $accessToken = $facebook->getAccessToken();
      ],
      attachment: {
         'properties' : {{'text' : 'pets', 'href' : 'http://www.youtube.com/browse?s=mp&t=t&c=15'}},
-        'properties' : {{'text' : 'pets', 'href' : 'http://www.youtube.com/browse?s=mp&t=t&c=15'}},
                         
        name: 'Connect',
        caption: '<b> What one do you pick? </b>',
