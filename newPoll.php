@@ -40,6 +40,36 @@ $accessToken = $facebook->getAccessToken();
 
 ?>
     <script type="text/javascript">
+     FB.ui(
+   {
+     method: 'stream.publish',
+     message: 'getting educated about Facebook Connect',
+     attachment: {
+       name: 'Connect',
+       caption: 'The Facebook Connect JavaScript SDK',
+       description: (
+         'A small JavaScript library that allows you to harness ' +
+         'the power of Facebook, bringing the user\'s identity, ' +
+         'social graph and distribution power to your site.'
+       ),
+       href: 'http://github.com/facebook/connect-js'
+     },
+     action_links: [
+       { text: 'Code', href: 'http://github.com/facebook/connect-js' }
+     ],
+     user_message_prompt: 'Share your thoughts about Connect'
+   },
+   function(response) {
+     if (response && response.post_id) {
+       alert('Post was published.');
+     } else {
+       alert('Post was not published.');
+     }
+   }
+ );
+
+    
+    
         $(document).ready(function(){
             $('.dataTable').dataTable({			
                 "sPaginationType": "full_numbers",					
@@ -89,7 +119,15 @@ $accessToken = $facebook->getAccessToken();
         });
     </script>
     
-    
+    <script>
+  FB.ui(
+   {
+     method: 'stream.publish',
+     message: 'Check out this great app! http://apps.facebook.com/{your_app}'
+   }
+  );
+</script>
+
     <table width="100%" cellpadding="0" cellspacing="0" class="poll font10">
         <thead>
             <tr>
