@@ -79,7 +79,9 @@ $accessToken = $facebook->getAccessToken();
 		params['userID'] = '<?=$uid?>';
 		params['question'] = $('#question').val();
 		params['postTo'] = $('#postTo').val();
-		params['postPoll'] = $('#postPoll').val();
+                if($('#postPoll')).is(':checked')){
+                    params['postPoll'] = $('#postPoll').val();
+                }
 		params['options'] = $('#options').val();
 		params['buttons'] = $('#buttons').val();
 		return $.ajax({
