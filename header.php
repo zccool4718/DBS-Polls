@@ -88,7 +88,6 @@ if(!empty($session)) {
 
     <!-- jquery + jquery UI includes Plugins-->  
     <script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
-    <script type="text/javascript" language="javascript" src="js/jquery-ui.dialog.js"></script>
     
     
 </head>
