@@ -40,6 +40,7 @@ $accessToken = $facebook->getAccessToken();
 
 ?>
     <script type="text/javascript">
+        var price = 0;
         $(document).ready(function(){
             $('.dataTable').dataTable({			
                 "sPaginationType": "full_numbers",					
@@ -48,13 +49,13 @@ $accessToken = $facebook->getAccessToken();
             
             $('#PollSubmit').bind('click', function(){
                 if($('#pollOpen').is(':checked')){
-                    $('#id').val() = $('#id').val() + 10.00;
-                    alert($('#pollOpen').val());
+                    price = price + 10.00;
                 }
                 if($('#noAds').is(':checked')){
-                    $('#id').val() = $('#id').val() + 5.00;
-                    alert($('#pollOpen').val());
+                    price = price + 5.00;
                 }
+                
+                alert(price);
             });
             
         });
