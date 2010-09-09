@@ -54,7 +54,7 @@ $accessToken = $facebook->getAccessToken();
                 if($('#noAds').is(':checked')){
                     price = price + 5.00;
                 }
-                $('#total').val() = "$"+price;
+                $('#total').val("$"+price);
             });
         });
     </script>
