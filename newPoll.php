@@ -88,12 +88,13 @@ $accessToken = $facebook->getAccessToken();
                 
                 $('#paidOptions').find(':input').each(function(){
                     if($(this).is(':checked')){
-                        alert(parseFloat($(this).attr("alt")));
+                      //  alert(parseFloat($(this).attr("alt")));
+                        price = price + parseFloat($(this).attr("alt"));
                     }
                 });
                 
                 if(price != 0){
-                    $('#total').val("$"+price+");                    
+                    $('#total').val("$"+price);                    
                 } else {
                     $('#total').val("Free"); 
                 }    
