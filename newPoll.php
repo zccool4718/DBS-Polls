@@ -66,12 +66,19 @@ $accessToken = $facebook->getAccessToken();
                 if($('#all').is(':checked')){
                     $('#pollOpen').attr("checked", false);
                     $('#noAds').attr("checked", false);
+                    $('#anyComment').attr("checked", false);
                     $('#manyVotes').attr("checked", false);
                     $('#differentTime').attr("checked", false);
                     price = 15.00;
                 }
                 if($('#allMonth').is(':checked')){
-                    price = price + 50.00;
+                    $('#pollOpen').attr("checked", false);
+                    $('#noAds').attr("checked", false);
+                    $('#anyComment').attr("checked", false);
+                    $('#manyVotes').attr("checked", false);
+                    $('#differentTime').attr("checked", false);
+                    $('#all').attr("checked", false);
+                    price = 50.00;
                 }
                 if(price != 0){
                     $('#total').val("$"+price+".00");                    
