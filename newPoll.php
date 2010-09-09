@@ -48,10 +48,6 @@ $accessToken = $facebook->getAccessToken();
             
             $('#PollSubmit').bind('click', function(){
                     alert("clicked");
-                if($('#pollOpen').is(':checked')){
-                
-                    alert($('#pollOpen').val());
-                }
             });
             
         });
@@ -129,7 +125,7 @@ $accessToken = $facebook->getAccessToken();
             </tr>
             <tr>
                 <td class="title"></td>
-                <td> <button class="PollSubmit"> Submit </button></td>
+                <td> <button name="PollSubmit" class="PollSubmit"> Submit </button></td>
             </tr>
         </tbody>
     </table>
