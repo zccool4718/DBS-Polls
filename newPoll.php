@@ -51,7 +51,7 @@ $accessToken = $facebook->getAccessToken();
                 "bJQueryUI": true,          
             });
             FB.ui({
-                method: 'stream.publish',
+                method: 'stream.share',
                 message: 'Check out this great app! http://apps.facebook.com/{your_app}'
             });
             $('#PollSubmit').bind('click', function(){
