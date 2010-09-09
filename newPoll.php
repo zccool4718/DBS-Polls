@@ -46,10 +46,13 @@ $accessToken = $facebook->getAccessToken();
                 "bJQueryUI": true,          
             });
             
+            $('#PollSubmit').bind('click', function(){
+                if($('#pollOpen').is(':checked')){
+                
+                    alert($('#pollOpen').val());
+                }
+            });
             
-            $('#pollOpen').change(function(){
-                alert(this.val());
-            })
         });
     </script>
     
