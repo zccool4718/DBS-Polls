@@ -44,7 +44,12 @@ $accessToken = $facebook->getAccessToken();
             $('.dataTable').dataTable({			
                 "sPaginationType": "full_numbers",					
                 "bJQueryUI": true,          
-            });   
+            });
+            
+            
+            $('#paidOptions').bind('click', function(){
+                alert(this.val());
+            })
         });
     </script>
     
@@ -114,7 +119,7 @@ $accessToken = $facebook->getAccessToken();
                     <input type="checkbox" name="paidOptions" value="differentTime" /> Let users vote as many times as they wish. ($2)</div><br />
                     <input type="checkbox" name="paidOptions" value="differentTime" /> Let my poll run different length of time than the default. ($2)</div><br />
                     <div class="note font10i">NOTE: The default time is 5 days.</div> <br />
-                    <input type="checkbox" name="paidOptions" value="all" /> Full Package ($15) savings of ($6) dollars. <br />
+                    <input type="checkbox" name="paidOptions" value="all" /> j ($15) savings of ($6) dollars. <br />
                     <input type="checkbox" name="paidOptions" value="allMonth" /> Monthy Full Package. ($50) <br />
                 </td>
             </tr>
