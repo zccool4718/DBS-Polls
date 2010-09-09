@@ -36,7 +36,9 @@ $accessToken = $facebook->getAccessToken();
                 
 */
 
-                
+         
+    $sql = "SELECT * FROM pollPaidOptions";
+    $paidOptions = $database->query($sql);       
 
 ?>
     <script type="text/javascript">
@@ -81,44 +83,35 @@ $accessToken = $facebook->getAccessToken();
             );            
             
             $('#PollSubmit').bind('click', function(){
-                var price = 0;
-                if($('#pollOpen').is(':checked')){
-                    price = price + 10.00;
-                }
-                if($('#noAds').is(':checked')){
-                    price = price + 5.00;
-                }
-                if($('#anyComment').is(':checked')){
-                    price = price + 2.00;
-                }
-                if($('#manyVotes').is(':checked')){
-                    price = price + 2.00;
-                }
-                if($('#differentTime').is(':checked')){
-                    price = price + 2.00;
-                }
-                if($('#all').is(':checked')){
-                    $('#pollOpen').attr("checked", false);
-                    $('#noAds').attr("checked", false);
-                    $('#anyComment').attr("checked", false);
-                    $('#manyVotes').attr("checked", false);
-                    $('#differentTime').attr("checked", false);
-                    price = 15.00;
-                }
-                if($('#allMonth').is(':checked')){
-                    $('#pollOpen').attr("checked", false);
-                    $('#noAds').attr("checked", false);
-                    $('#anyComment').attr("checked", false);
-                    $('#manyVotes').attr("checked", false);
-                    $('#differentTime').attr("checked", false);
-                    $('#all').attr("checked", false);
-                    price = 50.00;
-                }
+                var price = 0;                
+                var params = {};
+                
+                ($('#paidOptions').each(function(){
+                    if($(this).is(':checked')){
+                        price = price + $(this).attr("alt);
+                    }
+                });
+                
                 if(price != 0){
                     $('#total').val("$"+price+".00");                    
                 } else {
                     $('#total').val("Free"); 
-                }
+                }    
+		
+		//params['toggleID'] = $(this).attr("alt");
+		//params['userID'] = '<?=$_SESSION['UserID']?>';
+		//params['action'] = "undeleteToggle";
+		//return $.ajax({
+		//    type: "POST",
+		//    url: "toggle_ajax.php",
+		//    data: params,
+		//    async: false,
+		//    dataType: 'html',
+		//    success: function(output){
+		//	window.location.reload( false );
+		//    }
+		//});  
+                
             });
         });
     </script>
@@ -144,7 +137,6 @@ $accessToken = $facebook->getAccessToken();
                         <tr>
                             <td class="postToList">
                                 <select size="5" name="postTo" class="postTo" id="postTo" multiple="multiple">
-                                    <option value="wall">Post to my Wall</option>
                                     <?
                                         foreach($accounts['data'] as $index => $value){
                                             print('<option value="'.$value['id'].'">'.$value['name'].'</option>');
@@ -183,15 +175,15 @@ $accessToken = $facebook->getAccessToken();
             </tr>
             <tr>
                 <td class="title">Paid Features</td>
-                <td>
-                    <input type="checkbox" ID="pollOpen" value="pollOpen" /> Open this poll to non Facebook users. ($10) <br />
-                    <input type="checkbox" ID="noAds" value="noAds" /> Don't show ad's on my poll page. ($5) <br />
-                    <input type="checkbox" ID="anyComment value="anyComment" /> Let non facebook people post comments. ($2) <br />
-                    <input type="checkbox" ID="manyVotes" value="manyVotes" /> Let users vote as many times as they wish. ($2)</div><br />
-                    <input type="checkbox" ID="differentTime" value="differentTime" /> Let my poll run different length of time than the default. ($2)</div><br />
-                    <div class="note font10i">NOTE: The default time is 5 days.</div> <br />
-                    <input type="checkbox" ID="all" value="all" /> Full Package ($15) savings of ($6) dollars. <br />
-                    <input type="checkbox" ID="allMonth" value="allMonth" /> Monthy Full Package. ($50) <br />
+                <td class="paidOptions">
+                    <?                        
+                        foreach($paidOptions as $index => $value){
+                            print('<input type="checkbox" ID="'.$value['id'].'" value="'.$value['id'].'" alt="'.$value['price'].'" /> '.$value['text'].' ($'.$value['price'].') <br />');
+                            if(!empty($value['note'])){
+                                print('<div class="note font10i">NOTE: '.$value['note'].'</div> <br />');
+                            }
+                        }
+                    ?>
                 </td>
             </tr>
             <tr>
