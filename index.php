@@ -16,6 +16,7 @@ $database->Execuite($sql);
 
 $accessToken = $facebook->getAccessToken();
     $friends = array();
+    $friends['data'] = array();
     $url = "https://graph.facebook.com/me/friends?access_token=" . $accessToken;
     $tmpJson = @file_get_contents($url); 
     $jsonDecode = json_decode($tmpJson);
