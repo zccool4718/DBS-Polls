@@ -87,7 +87,9 @@ $accessToken = $facebook->getAccessToken();
                 var params = {};
                 
                 $('#paidOptions:input').each(function(){
+                        alert($(this).val());
                     if($(this).is(':checked')){
+                        alert($(this).attr("alt"));
                         price = price + $(this).attr("alt");
                     }
                 });
