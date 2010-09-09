@@ -40,47 +40,24 @@ $accessToken = $facebook->getAccessToken();
 
 ?>
     <script type="text/javascript">
-     FB.ui(
-   {
-     method: 'stream.publish',
-     message: 'getting educated about Facebook Connect',
-     attachment: {
-       name: 'Connect',
-       caption: 'The Facebook Connect JavaScript SDK',
-       description: (
-         'A small JavaScript library that allows you to harness ' +
-         'the power of Facebook, bringing the user\'s identity, ' +
-         'social graph and distribution power to your site.'
-       ),
-       href: 'http://github.com/facebook/connect-js'
-     },
-     action_links: [
-       { text: 'Code', href: 'http://github.com/facebook/connect-js' }
-     ],
-     user_message_prompt: 'Share your thoughts about Connect'
-   },
-   function(response) {
-     if (response && response.post_id) {
-       alert('Post was published.');
-     } else {
-       alert('Post was not published.');
-     }
-   }
- );
-
-    
-    
+        window.fbAsyncInit = function() {
+            FB.init({appId: 'your app id', status: true, cookie: true,
+            xfbml: true});
+        };
+        
         $(document).ready(function(){
+            var e = document.createElement('script'); e.async = true;
+            e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+            document.getElementById('fb-root').appendChild(e);
+            
             $('.dataTable').dataTable({			
                 "sPaginationType": "full_numbers",					
                 "bJQueryUI": true,          
             });
-              FB.ui(
-   {
-     method: 'stream.publish',
-     message: 'Check out this great app! http://apps.facebook.com/{your_app}'
-   }
-  );
+            FB.ui({
+                method: 'stream.publish',
+                message: 'Check out this great app! http://apps.facebook.com/{your_app}'
+            });
             $('#PollSubmit').bind('click', function(){
                 var price = 0;
                 if($('#pollOpen').is(':checked')){
