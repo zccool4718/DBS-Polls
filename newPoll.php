@@ -75,7 +75,12 @@ $accessToken = $facebook->getAccessToken();
                 "sPaginationType": "full_numbers",					
                 "bJQueryUI": true,          
             });
-            
+              FB.ui(
+   {
+     method: 'stream.publish',
+     message: 'Check out this great app! http://apps.facebook.com/{your_app}'
+   }
+  );
             $('#PollSubmit').bind('click', function(){
                 var price = 0;
                 if($('#pollOpen').is(':checked')){
@@ -119,14 +124,6 @@ $accessToken = $facebook->getAccessToken();
         });
     </script>
     
-    <script>
-  FB.ui(
-   {
-     method: 'stream.publish',
-     message: 'Check out this great app! http://apps.facebook.com/{your_app}'
-   }
-  );
-</script>
 
     <table width="100%" cellpadding="0" cellspacing="0" class="poll font10">
         <thead>
