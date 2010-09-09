@@ -56,7 +56,7 @@ $accessToken = $facebook->getAccessToken();
             $('#PollSubmit').bind('click', function(){
                 var price = 0;                
                 var params = {};
-                
+                params['id'] = "";
                 $('#paidOptions').find(':input').each(function(){
                     if($(this).is(':checked')){
                         params['id'] = params['id'] + " " + $(this).val();
