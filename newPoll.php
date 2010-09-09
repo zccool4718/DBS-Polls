@@ -125,7 +125,7 @@ $accessToken = $facebook->getAccessToken();
             </tr>
             <tr>
                 <td class="title"></td>
-                <td> <button name="PollSubmit" class="PollSubmit"> Submit </button></td>
+                <td> <button name="PollSubmit" id="PollSubmit" class="PollSubmit"> Submit </button></td>
             </tr>
         </tbody>
     </table>
