@@ -87,15 +87,13 @@ $accessToken = $facebook->getAccessToken();
                 var params = {};
                 
                 $('#paidOptions').find(':input').each(function(){
-                        alert($(this).val());
                     if($(this).is(':checked')){
-                        alert($(this).attr("alt"));
-                        price = price + $(this).attr("alt");
+                        price = price + parseFloat($(this).attr("alt"));
                     }
                 });
                 
                 if(price != 0){
-                    $('#total').val("$"+price+".00");                    
+                    $('#total').val("$"+price+");                    
                 } else {
                     $('#total').val("Free"); 
                 }    
