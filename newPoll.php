@@ -51,34 +51,34 @@ $accessToken = $facebook->getAccessToken();
                 "bJQueryUI": true,          
             });            
             
-            //FB.ui({
-            //    method: 'stream.publish',
-            //    message: 'I just made a new pool at DBS Polls, why don\'t you take it.',
-            //    action_links: [
-            //        { text: 'Take Poll', href: 'http://pollsystem.dbscode.com/newPoll.php' },
-            //        { text: 'Make your Own poll', href: 'http://pollsystem.dbscode.com/newPoll.php' }
-            //    ],
-            //    attachment: {                       
-            //        user_message_prompt: 'Share your poll',
-            //        caption: '<b> What one do you pick? </b>',
-            //        properties: { 
-            //            '1': { 'text': 'Answer 1 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
-            //            '2': { 'text': 'Answer 2 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
-            //            '3': { 'text': 'Answer 3 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
-            //            '4': { 'text': 'Answer 4 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
-            //            '5': { 'text': 'Answer 5 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'},
-            //            '6': { 'text': 'Answer 6 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}
-            //        }
-            //    }
-            //    },
-            //    function(response) {
-            //        if (response && response.post_id) {
-            //            alert('Post was published.');
-            //        } else {
-            //            alert('Post was not published.');
-            //        }
-            //    }
-            //);            
+            FB.ui({
+                method: 'stream.publish',
+                message: 'I just made a new pool at DBS Polls, why don\'t you take it.',
+                action_links: [
+                    { text: 'Take Poll', href: 'http://pollsystem.dbscode.com/newPoll.php' },
+                    { text: 'Make your Own poll', href: 'http://pollsystem.dbscode.com/newPoll.php' }
+                ],
+                attachment: {                       
+                    user_message_prompt: 'Share your poll',
+                    caption: '<b> What one do you pick? </b>',
+                    properties: { 
+                        '1': { 'text': 'Answer 1 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
+                        '2': { 'text': 'Answer 2 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
+                        '3': { 'text': 'Answer 3 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
+                        '4': { 'text': 'Answer 4 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}, 
+                        '5': { 'text': 'Answer 5 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'},
+                        '6': { 'text': 'Answer 6 ', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=1231423'}
+                    }
+                }
+                },
+                function(response) {
+                    if (response && response.post_id) {
+                        alert('Post was published.');
+                    } else {
+                        alert('Post was not published.');
+                    }
+                }
+            );            
             
             $('#PollSubmit').bind('click', function(){
                 var price = 0;
