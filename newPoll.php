@@ -100,7 +100,8 @@ $accessToken = $facebook->getAccessToken();
             });
         });
     </script>
-    
+    <div id="fb-root"></div>
+
 
     <table width="100%" cellpadding="0" cellspacing="0" class="poll font10">
         <thead>

@@ -81,7 +81,10 @@ if(!empty($session)) {
     
     <!-- jquery + jquery UI includes -->
     <script type="text/javascript" language="javascript" src="js/jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" language="javascript" src="js/jquery-ui-1.8.4.custom.min.js"></script>  
+    <script type="text/javascript" language="javascript" src="js/jquery-ui-1.8.4.custom.min.js"></script>
+    <script type="text/javascript" language="javascript" src="http://connect.facebook.net/en_US/all.js"></script>
+    
+    
 
     <!-- jquery + jquery UI includes Plugins-->  
     <script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
