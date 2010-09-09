@@ -177,7 +177,7 @@ $accessToken = $facebook->getAccessToken();
             </tr>
             <tr>
                 <td class="title">Paid Features</td>
-                <td class="paidOptions">
+                <td ID="paidOptions" class="paidOptions">
                     <?                        
                         foreach($paidOptions as $index => $value){
                             print('<input type="checkbox" ID="'.$value['id'].'" value="'.$value['id'].'" alt="'.$value['price'].'" /> '.$value['text'].' ($'.$value['price'].') <br />');
