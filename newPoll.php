@@ -117,7 +117,7 @@ $accessToken = $facebook->getAccessToken();
                                     caption: $('#question').val(),
                                     properties: { optionsPrint }
                                 }
-                            );
+                             });
                             
                         }
                     });  
