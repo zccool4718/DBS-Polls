@@ -100,7 +100,7 @@ $accessToken = $facebook->getAccessToken();
                         dataType: 'html',
                         success: function(output){
                             alert(output);
-                                for(var i in names){
+                                for(var i in options){
                                     optionsPrint = optionsPrint + "'" + (i -1) + "': { 'text': '" + names[i] + "', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=" + output + "&answer=" + (i -1) +"'},";
                                 }
                                 
