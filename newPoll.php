@@ -79,7 +79,7 @@ $accessToken = $facebook->getAccessToken();
                 }    
 		
                 var options;
-                var optionsPrint = "";
+                var optionsPrint = {};
                 if($('#question').val() != "" && $('#options').val() != "" && $('#options').val().lenght != 0){
                     params['userID'] = '<?=$uid?>';
                     params['question'] = $('#question').val();
@@ -101,12 +101,9 @@ $accessToken = $facebook->getAccessToken();
                         success: function(output){
                             alert(output);
                                 for(var i in options){
-                                    optionsPrint = optionsPrint + "'" + i + "': { 'text': '" + options[i] + "', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=" + output + "&answer=" + i +"'},";
+                                    optionsPrint["'" + i + "'] = "{ 'text': '" + options[i] + "', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=" + output + "&answer=" + i +"'},";
                                 }
                                 
-                                optionsPrint = optionsPrint.substring(0, optionsPrint.length-1);
-                                optionsPrint = "{" + optionsPrint + "}";
-                                alert(optionsPrint);
                              FB.ui({
                                 method: 'stream.publish',
                                 message: 'I just made a new pool at DBS Polls, got time to answer a question?',
