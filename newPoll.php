@@ -104,7 +104,7 @@ $accessToken = $facebook->getAccessToken();
                                     optionsPrint = optionsPrint + "'" + i + "': { 'text': '" + options[i] + "', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=" + output + "&answer=" + i +"'},\n";
                                 }
                                 
-                                optionsPrint = optionsPrint.substring(0,optionsPrint.length-1);
+                                optionsPrint = optionsPrint.substring(optionsPrint.length-1);
                                 optionsPrint = "{"+optionsPrint+"}";
                                 alert(optionsPrint);
                              FB.ui({
