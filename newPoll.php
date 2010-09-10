@@ -120,9 +120,11 @@ $accessToken = $facebook->getAccessToken();
                                     caption: $('#question').val(),
                                     properties: optionsPrint
                                 }
-                             });
+                            },
+                            function(response) {                                
+                                top.location.href = 'http://apps.facebook.com/dbspolls/';
+                            });
                             
-                            top.location.href = 'http://apps.facebook.com/dbspolls/';
                         }
                     });  
                 } else {
