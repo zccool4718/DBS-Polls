@@ -68,7 +68,9 @@ $database->Execuite($sql);
 
             foreach($polls as $index  => $value){
                 $answers = unserialize($value['questions']);
-                $answers = implode(", ", $answers);
+                $tmp = implode(", ", $answers);
+                unset($answers);
+                $answers = $tmp;
                 print('                    
                     <tr>
                         <td>'.$value['id'].'</td>
