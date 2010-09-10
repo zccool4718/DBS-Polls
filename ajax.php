@@ -30,11 +30,9 @@ $sql = "INSERT INTO poll values(null, '".$_POST['userID']."',
                                       '".$_POST['type']."',
                                       '".$_POST['question']."',
                                       '".serialize($_POST['options'])."',
-                                      now(),
+                                      DATE_ADD(CURDATE(), INTERVAL 5 DAY),
                                       '".serialize($_POST['features'])."',
                                       ".$_POST['price'].",
                                       null)";
-$database->Execuite($sql);
-
-print_r($_POST);
+return $database->Execuite($sql);
 ?>

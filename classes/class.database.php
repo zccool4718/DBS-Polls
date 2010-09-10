@@ -86,7 +86,7 @@
             return false;  //replace with error code using an error class
         } else {            
             $this->affected_rows = mysql_affected_rows();
-            return true;
+            return mysql_insert_id();
         }
         
 	}        
