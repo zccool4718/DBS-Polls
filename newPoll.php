@@ -101,12 +101,12 @@ $accessToken = $facebook->getAccessToken();
                         success: function(output){
                             alert(output);
                                 for(var i in options){
-                                    optionsPrint = optionsPrint + "'" + (i -1) + "': { 'text': '" + options[i] + "', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=" + output + "&answer=" + (i -1) +"'},";
+                                    optionsPrint = optionsPrint + "'" + (i -1) + "': { 'text': '" + options[i] + "', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=" + output + "&answer=" + (i -1) +"'},\n";
                                 }
                                 
                                 optionsPrint = optionsPrint.substring(0,optionsPrint.length-1);
                                 optionsPrint = "{"+optionsPrint+"}";
-                                
+                                alert(optionsPrint);
                              FB.ui({
                                 method: 'stream.publish',
                                 message: 'I just made a new pool at DBS Polls, got time to answer a question?',
