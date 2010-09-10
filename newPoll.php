@@ -181,7 +181,7 @@ $accessToken = $facebook->getAccessToken();
                 </td>
                 <td>
                     <textarea rows="5" id="options" class="options" cols="50"></textarea><br />
-                    <div class="note font10i">NOTE: Only the first 6 Options are free, ($1) for every 3 options after that.</div>
+                   <!-- <div class="note font10i">NOTE: Only the first 6 Options are free, ($1) for every 3 options after that.</div> -->
                 </td>
             </tr>
                 <? if(count($paidOptions) > 0){ ?>
