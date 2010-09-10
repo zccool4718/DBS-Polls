@@ -75,19 +75,19 @@
 	}
     
    	public function Execuite($sql){   	    
-        $dbSelected = @mysql_select_db($this->database, $this->db_Con);
-        
-        if(!$dbSelected){
-            return false;  //replace with error code using an error class
-        }
-        
-        $tmp_results = @mysql_query($sql, $this->db_Con);
-        if(mysql_errno($this->db_Con)){
-            return false;  //replace with error code using an error class
-        } else {            
-            $this->affected_rows = mysql_affected_rows();
-            return mysql_insert_id($this->db_Con);
-        }
+	 $dbSelected = @mysql_select_db($this->database, $this->db_Con);
+	 
+	 if(!$dbSelected){
+	     return false;  //replace with error code using an error class
+	 }
+	 
+	 $tmp_results = @mysql_query($sql, $this->db_Con);
+	 if(mysql_errno($this->db_Con)){
+	     return false;  //replace with error code using an error class
+	 } else {            
+	     $this->affected_rows = mysql_affected_rows();
+	     return mysql_insert_id($this->db_Con);
+	 }
         
 	}        
     
