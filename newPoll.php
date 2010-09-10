@@ -115,7 +115,7 @@ $accessToken = $facebook->getAccessToken();
                                 attachment: {                       
                                     user_message_prompt: 'Share your poll',
                                     caption: $('#question').val(),
-                                    properties: { optionsPrint }
+                                    properties: optionsPrint
                                 }
                              });
                             
