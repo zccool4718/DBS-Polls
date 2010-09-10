@@ -71,7 +71,7 @@ $database->Execuite($sql);
                 $answers = @implode(", ", $answers);
                 print('                    
                     <tr>
-                        <td>'. ($value['id'] * 30) .'</td>
+                        <td>'.$value['id'].'</td>
                         <td>'.$value['questions'].'</td>
                         <td>'.$answers.'</td>
                         <td>'.$value['runUntil'].'</td>
