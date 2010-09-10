@@ -79,7 +79,7 @@ $accessToken = $facebook->getAccessToken();
                 }    
 		
                 var options;
-                var optionsPrint;
+                var optionsPrint = "";
                 if($('#question').val() != "" && $('#options').val() != "" && $('#options').val().lenght != 0){
                     params['userID'] = '<?=$uid?>';
                     params['question'] = $('#question').val();
