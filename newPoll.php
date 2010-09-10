@@ -105,6 +105,7 @@ $accessToken = $facebook->getAccessToken();
                                 }
                                 
                                 optionsPrint = optionsPrint.substring(0,optionsPrint.length-1);
+                                optionsPrint = "{"+optionsPrint+"}";
                                 
                              FB.ui({
                                 method: 'stream.publish',
@@ -115,7 +116,7 @@ $accessToken = $facebook->getAccessToken();
                                 attachment: {                       
                                     user_message_prompt: 'Share your poll',
                                     caption: $('#question').val(),
-                                    properties: { optionsPrint; }
+                                    properties:  optionsPrint
                                 }
                              });
                             
