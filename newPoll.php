@@ -79,7 +79,7 @@ $accessToken = $facebook->getAccessToken();
                 }    
 		
                 var options;
-                var optionsPrint = "";
+0,                 var optionsPrint = "";
                 if($('#question').val() != "" && $('#options').val() != "" && $('#options').val().lenght != 0){
                     params['userID'] = '<?=$uid?>';
                     params['question'] = $('#question').val();
@@ -104,8 +104,7 @@ $accessToken = $facebook->getAccessToken();
                                     optionsPrint = optionsPrint + "'" + i + "': { 'text': '" + options[i] + "', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=" + output + "&answer=" + i +"'},\n";
                                 }
                                 
-                                optionsPrint = optionsPrint.substring(optionsPrint.length-1);
-                                optionsPrint = "{"+optionsPrint+"}";
+                                optionsPrint = optionsPrint.substring(0, optionsPrint.length-1);
                                 alert(optionsPrint);
                              FB.ui({
                                 method: 'stream.publish',
@@ -116,7 +115,7 @@ $accessToken = $facebook->getAccessToken();
                                 attachment: {                       
                                     user_message_prompt: 'Share your poll',
                                     caption: $('#question').val(),
-                                    properties:  optionsPrint
+                                    properties: { optionsPrint }
                                 }
                              });
                             
