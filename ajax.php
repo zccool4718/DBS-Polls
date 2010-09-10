@@ -35,34 +35,10 @@ $sql = "INSERT INTO poll values(null, '".$_POST['userID']."',
                                       ".$_POST['price'].",
                                       null)";
 
-$pollID = $database->Execuite($sql);
+echo $database->Execuite($sql);
 
-$pintout = "    <script type=\"text/javascript\">
-   FB.ui({
-        method: 'stream.publish',
-        message: 'I just made a new pool at DBS Polls, got time to answer a question?',
-        action_links: [
-            { text: 'Make your Own poll', href: 'http://pollsystem.dbscode.com/newPoll.php' }
-        ],
-        attachment: {                       
-            user_message_prompt: 'Share your poll',
-            caption: '".$_POST['question']."',
-            properties: {";
 
-foreach($_POST['options'] as $index => $value){ 
-    $output .= "'".($index -1)."': { 'text': '".$value."', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=".$pollID."&answer=".($index -1)."'},";
-}
-$output = substr($output, 0, -1);
-$pintout .= $output;
-$pintout .= "            
-        }
-    }
-)
 
-</script>";
- 
-
-print($pintout);
 
 
 

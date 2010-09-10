@@ -78,6 +78,8 @@ $accessToken = $facebook->getAccessToken();
                     params['price'] = 0;
                 }    
 		
+                var options;
+                var optionsPrint;
                 if($('#question').val() != "" && $('#options').val() != "" && $('#options').val().lenght != 0){
                     params['userID'] = '<?=$uid?>';
                     params['question'] = $('#question').val();
@@ -86,6 +88,10 @@ $accessToken = $facebook->getAccessToken();
                         params['postPoll'] = $('#postPoll').val();
                     }
                     params['options'] = $('#options').val();
+                    options = $('#options').val().split("\n")
+                    
+                
+                    
                     var pollID = 0;
                     return $.ajax({
                         type: "POST",
@@ -94,9 +100,24 @@ $accessToken = $facebook->getAccessToken();
                         dataType: 'html',
                         success: function(output){
                             alert(output);
-                            $('#fb-root').html(output);
-                            
-                         
+                                for(var i in names){
+                                    optionsPrint = optionsPrint + "'" + (i -1) + "': { 'text': '" + names[i] + "', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=" + output + "&answer=" + (i -1) +"'},";
+                                }
+                                
+                                optionsPrint = optionsPrint.substring(0,optionsPrint.length-1);
+                                
+                             FB.ui({
+                                method: 'stream.publish',
+                                message: 'I just made a new pool at DBS Polls, got time to answer a question?',
+                                action_links: [
+                                    { text: 'Make your Own poll', href: 'http://pollsystem.dbscode.com/newPoll.php' }
+                                ],
+                                attachment: {                       
+                                    user_message_prompt: 'Share your poll',
+                                    caption: $('#question').val(),
+                                    properties: { optionsPrint }
+                                }
+                            );
                             
                         }
                     });  
