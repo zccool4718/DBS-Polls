@@ -36,9 +36,8 @@ $sql = "INSERT INTO poll values(null, '".$_POST['userID']."',
                                       null)";
 
 $pollID = $database->Execuite($sql);
-?>
 
-    <script type="text/javascript">
+$pintout = "    <script type=\"text/javascript\">
    FB.ui({
         method: 'stream.publish',
         message: 'I just made a new pool at DBS Polls, got time to answer a question?',
@@ -47,24 +46,23 @@ $pollID = $database->Execuite($sql);
         ],
         attachment: {                       
             user_message_prompt: 'Share your poll',
-            caption: '<?=$_POST['question']?>',
-            properties: {
-                
-                <?
-                    foreach($_POST['options'] as $index => $value){
-                        $output .= "'".($index -1)."': { 'text': '".$value."', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=".$pollID."&answer=".($index -1)."'},";
-                    }
-                    $output = substr($output, 0, -1);
-                    print($output);
-                ?>
-            }
+            caption: '".$_POST['question']."',
+            properties: {";
+
+foreach($_POST['options'] as $index => $value){ 
+    $output .= "'".($index -1)."': { 'text': '".$value."', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=".$pollID."&answer=".($index -1)."'},";
+}
+$output = substr($output, 0, -1);
+$pintout .= $output;
+$pintout .= "            
         }
-    );
-    </script>
-<?
+    }
+)
 
+</script>";
+ 
 
-
+print($pintout);
 
 
 
