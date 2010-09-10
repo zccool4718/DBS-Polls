@@ -28,6 +28,8 @@ if(!isset($_GET['ID'])){
     if(count($poll) > 0){
         if(isset($_GET['answer'])){
             $sql = "INSERT INTO pollResults values (null, " . $_GET['ID'] . ", '".$uid."', '".$_GET['answer']."', null, '".$_SERVER['REMOTE_ADDR']."', '".$_SERVER['HTTP_REFERER']."')";
+            $database->Execuite($sql);
+            print("Thank you for your vote.");
         } else {
             
         }
