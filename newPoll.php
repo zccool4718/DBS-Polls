@@ -160,11 +160,13 @@ $accessToken = $facebook->getAccessToken();
                                     ?>
                                 </select>
                             </td>
+                            <!--
                             <td class="postToQuestion font10bi">                            
                                 <input type="checkbox" id="postPoll" value="postPoll" /> Post this poll on page's wall. <br />
                                 <hr />                                
                                 <div class="note font10bi"> Get your poll notice and post on your wall.</div>
                             </td>
+                            -->
                         </tr>
                     </table>
                 
