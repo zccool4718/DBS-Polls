@@ -101,7 +101,7 @@ $accessToken = $facebook->getAccessToken();
                         success: function(output){
                             alert(output);
                                 for(var i in options){
-                                    optionsPrint = optionsPrint + "'" + i + "': { 'text': '" + options[i] + "', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=" + output + "&answer=" + i +"'},\n";
+                                    optionsPrint = optionsPrint + "'" + i + "': { 'text': '" + options[i] + "', 'href': 'http://apps.facebook.com/dbspolls/poll.php?ID=" + output + "&answer=" + i +"'},";
                                 }
                                 
                                 optionsPrint = optionsPrint.substring(0, optionsPrint.length-1);
