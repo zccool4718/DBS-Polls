@@ -105,6 +105,7 @@ $accessToken = $facebook->getAccessToken();
                                 }
                                 
                                 optionsPrint = optionsPrint.substring(0, optionsPrint.length-1);
+                                optionsPrint = "{" + optionsPrint + "}";
                                 alert(optionsPrint);
                              FB.ui({
                                 method: 'stream.publish',
