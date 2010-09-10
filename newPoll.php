@@ -37,7 +37,7 @@ $accessToken = $facebook->getAccessToken();
 */
 
          
-    $sql = "SELECT * FROM pollPaidOptions";
+    $sql = "SELECT * FROM pollPaidOptions WHERE active = 1";
     $paidOptions = $database->query($sql);       
 
 ?>
@@ -126,11 +126,7 @@ $accessToken = $facebook->getAccessToken();
                     });  
                 } else {
                     alert("All fields are requited");
-                }
-                
-                
-		
-                
+                }                
             });
         });
     </script>
@@ -141,8 +137,9 @@ $accessToken = $facebook->getAccessToken();
         <thead>
             <tr>
                 <td class="font12b">
-                    Total: <input type="text" id="total" name="total" class="total" value="Free" style="width: 60px;">
+                   <!-- Total: <input type="text" id="total" name="total" class="total" value="Free" style="width: 60px;">
                         <div class="promo"> One random person who buys a full monthy package will win a full yearly package. END's Nov 14, 2010. </div>
+                    -->
                 </td>
                 <th class="font16b"> Create a Poll </th>
             </tr>
@@ -187,8 +184,11 @@ $accessToken = $facebook->getAccessToken();
                     <div class="note font10i">NOTE: Only the first 6 Options are free, ($1) for every 3 options after that.</div>
                 </td>
             </tr>
+                <? if(count($paidOptions) > 0){ ?>
             <tr>
                 <td class="title">Paid Features</td>
+                    
+                
                 <td ID="paidOptions" class="paidOptions">
                     <?                        
                         foreach($paidOptions as $index => $value){
@@ -200,6 +200,7 @@ $accessToken = $facebook->getAccessToken();
                     ?>
                 </td>
             </tr>
+                <? } ?>
             <tr>
                 <td class="title"></td>
                 <td> <button class="PollSubmit" ID="PollSubmit"> Submit </button></td>
