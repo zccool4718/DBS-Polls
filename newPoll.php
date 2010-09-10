@@ -122,6 +122,7 @@ $accessToken = $facebook->getAccessToken();
                                 }
                              });
                             
+                            top.location.href = 'http://apps.facebook.com/dbspolls/';
                         }
                     });  
                 } else {

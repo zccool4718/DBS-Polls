@@ -14,13 +14,13 @@ $database->Execuite($sql);
 
 
 
-$accessToken = $facebook->getAccessToken();
-    $friends = array();
-    $friends['data'] = array();
-    $url = "https://graph.facebook.com/me/friends?access_token=" . $accessToken;
-    $tmpJson = @file_get_contents($url); 
-    $jsonDecode = json_decode($tmpJson);
-    $friends = objectToArray($jsonDecode);  
+//$accessToken = $facebook->getAccessToken();
+//    $friends = array();
+//    $friends['data'] = array();
+//    $url = "https://graph.facebook.com/me/friends?access_token=" . $accessToken;
+//    $tmpJson = @file_get_contents($url); 
+//    $jsonDecode = json_decode($tmpJson);
+//    $friends = objectToArray($jsonDecode);  
             
 
 /**
@@ -54,19 +54,27 @@ $accessToken = $facebook->getAccessToken();
         <thead style="height: 19px;">
             <tr style="white-space: nowrap;">
                 <th> ID </th>
-                <th> Name </th>
+                <th> Poll Question </th>
+                <th> Poll Answers </th>
+                <th> Running Until </th>
             </tr>
         </thead>
         <tbody>
             
             <?
-            $friends;
-            
-            foreach($friends['data'] as $index  => $value){
+            $sql = "SELECT * FROM `poll` WHERE userID = '" . $uid . "'";
+            $polls = $database->query($sql);
+
+
+            foreach($polls as $index  => $value){
+                $answers = unserialize($value['questions']);
+                $answers = implode(", ", $answers);
                 print('                    
                     <tr>
                         <td>'.$value['id'].'</td>
-                        <td><img src="https://graph.facebook.com/'.$value['id'].'/picture" style="width: 16px; height: 16px;">'.$value['name'].'</td>
+                        <td>'.$value['questions'].'</td>
+                        <td>'.$answers.'</td>
+                        <td>'.$value['runUntil'].'</td>
                     </tr>          
                 ');
             }
@@ -75,7 +83,9 @@ $accessToken = $facebook->getAccessToken();
         <tfoot>
             <tr >
                 <th> ID </th>
-                <th> Name </th>
+                <th> Poll Question </th>
+                <th> Poll Answers </th>
+                <th> Running Until </th>
             </tr>
         </tfoot>
     </table>
