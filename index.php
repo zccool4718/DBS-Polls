@@ -65,18 +65,19 @@ $database->Execuite($sql);
             $sql = "SELECT * FROM `poll` WHERE userID = '" . $uid . "'";
             $polls = $database->query($sql);
 
-
-            foreach($polls as $index  => $value){
-                $answers = unserialize($value['options']);
-                $answers = @implode(", ", $answers);
-                print('                    
-                    <tr>
-                        <td>'.$value['id'].'</td>
-                        <td>'.$value['questions'].'</td>
-                        <td>'.$answers.'</td>
-                        <td>'.$value['runUntil'].'</td>
-                    </tr>          
-                ');
+            if(count($polls) > 0){
+                foreach($polls as $index  => $value){
+                    $answers = unserialize($value['options']);
+                    $answers = @implode(", ", $answers);
+                    print('                    
+                        <tr>
+                            <td>'.$value['id'].'</td>
+                            <td>'.$value['questions'].'</td>
+                            <td>'.$answers.'</td>
+                            <td>'.$value['runUntil'].'</td>
+                        </tr>          
+                    ');
+                }
             }
             ?>
         </tbody>
