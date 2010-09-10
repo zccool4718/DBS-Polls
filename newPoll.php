@@ -93,8 +93,8 @@ $accessToken = $facebook->getAccessToken();
                         data: params,
                         dataType: 'html',
                         success: function(output){
-                            //alert(output);
-                            $('#fb-root').html(output);
+                            alert(output);
+                            //$('#fb-root').html(output);
                             
                          
                             
