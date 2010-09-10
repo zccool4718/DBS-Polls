@@ -86,7 +86,6 @@ $accessToken = $facebook->getAccessToken();
                         params['postPoll'] = $('#postPoll').val();
                     }
                     params['options'] = $('#options').val();
-                    params['buttons'] = $('#buttons').val();
                     return $.ajax({
                         type: "POST",
                         url: "ajax.php",
@@ -191,10 +190,6 @@ $accessToken = $facebook->getAccessToken();
                     <textarea rows="5" id="options" class="options" cols="50"></textarea><br />
                     <div class="note font10i">NOTE: Only the first 6 Options are free, ($1) for every 3 options after that.</div>
                 </td>
-            </tr>
-            <tr>
-                <td class="title">Button Caption</td>
-                <td><input type="text" id="buttons" class="buttons"></td>
             </tr>
             <tr>
                 <td class="title">Paid Features</td>
