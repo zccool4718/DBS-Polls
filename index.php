@@ -68,10 +68,10 @@ $database->Execuite($sql);
 
             foreach($polls as $index  => $value){
                 $answers = unserialize($value['options']);
-                $answers = implode(", ", $answers);
+                $answers = @implode(", ", $answers);
                 print('                    
                     <tr>
-                        <td>'.$value['id'].'</td>
+                        <td>'. ($value['id'] * 30) .'</td>
                         <td>'.$value['questions'].'</td>
                         <td>'.$answers.'</td>
                         <td>'.$value['runUntil'].'</td>
