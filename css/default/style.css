@@ -39,10 +39,11 @@ html{
 
 /* Poll Results Table */
 
-.resultsTable thead th{
+.resultsTable thead tr th{
     background-color:   #30487B;
 }
-.resultsTable thead td{
+
+.resultsTable thead tr td{
     background-color:   #4E7099;
 }
 
