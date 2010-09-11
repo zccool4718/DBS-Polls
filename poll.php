@@ -8,6 +8,8 @@
 include("header.php");
 
 $uid = $facebook->getUser();
+if(isset($uid) && !empty($uid)){
+  
 
 $sql = "INSERT INTO accessLog VALUES (null, '".$_SESSION['id']."', '".$_SERVER['PHP_SELF']."', '".$_SERVER['HTTP_REFERER']."', '".$_SERVER['REMOTE_ADDR']."', '".$_SERVER['HTTP_USER_AGENT']."', null)";
 $database->Execuite($sql);
@@ -46,10 +48,29 @@ if(!isset($_GET['ID'])){
     
 }
 
+$sql = "SELECT *, count(*) FROM poll WHERE id = " . $_GET['ID'];
+$poll = $database->query($sql);
 
+$sql = "SELECT *, count(*) FROM poll WHERE id = " . $_GET['ID'];
+$poll = $database->query($sql);
 
 ?>
-    
+    <table cellpadding="0" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th colspan="2"> Poll Results </th>
+            </tr>
+            <tr>
+                <td>View | Delete | Edit | Invite Friends to Vote </td>
+                <td id="votes" class="votes"> Votes: </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                
+            </tr>
+        </tbody>
+    </table>
     
     
 
@@ -58,6 +79,16 @@ if(!isset($_GET['ID'])){
  
  
 <?
+
+  
+} else {
+    print(' <script type="text/javascript">
+                top.location.href = "http://apps.facebook.com/dbspolls/";
+            </script>');
+    
+}
+
+
 include("footer.php");
 ?>
     
