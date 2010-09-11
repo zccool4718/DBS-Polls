@@ -23,6 +23,21 @@ html{
     
 }
 
+
+/* Poll Results Table */
+
+.resultsTable thead th{
+    background-color:   #30487B;
+}
+
+.resultsTable thead td{
+    background-color:   #4E7099;
+}
+
+
+
+
+
 .footer{
     width:              100%;
     border-top:         1px solid #B3B3B3;  
@@ -37,15 +52,7 @@ html{
 
 
 
-/* Poll Results Table */
 
-.resultsTable{
-    background-color:   #30487B;
-}
-
-.resultsTable thead tr td{
-    background-color:   #4E7099;
-}
 
 /* General */
 .right{
