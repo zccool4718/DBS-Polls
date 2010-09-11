@@ -22,6 +22,8 @@ if(!isset($_GET['ID'])){
     $sql = "SELECT *, count(*) FROM `poll` WHERE id = '" . $_GET['ID'] . "'";
     $poll = $database->query($sql);
     
+print_r($poll);
+
     foreach($poll as $index => $value){       
         $results[$value['answers']] = $value['id'];
     }
@@ -45,7 +47,6 @@ if(!isset($_GET['ID'])){
     
 }
 
-print_r($poll);
 print_r($results);
 
 ?>
