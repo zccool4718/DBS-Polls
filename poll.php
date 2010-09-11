@@ -22,7 +22,7 @@ if(!isset($_GET['ID'])){
     $sql = "SELECT * FROM `poll` WHERE id = '" . $_GET['ID'] . "'";
     $poll = $database->query($sql);
     
-    $sql = "SELECT * FROM `pollResults` WHERE id = '" . $_GET['ID'] . "'";
+    $sql = "SELECT * FROM `pollResults` WHERE pollID = ". $_GET['ID'];
     $pollResults = $database->query($sql);
 
     foreach($pollResults as $index => $value){       
