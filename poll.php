@@ -19,7 +19,7 @@ if(!isset($_GET['ID'])){
                 top.location.href = "http://apps.facebook.com/dbspolls/";
             </script>');
 } elseif($_GET['ID'] > 0){
-    $sql = "SELECT *, count(*) FROM `poll` WHERE id = '" . $_GET['ID'] . "'";
+    $sql = "SELECT * FROM `poll` WHERE id = '" . $_GET['ID'] . "'";
     $poll = $database->query($sql);
     
 print_r($poll);
