@@ -44,13 +44,7 @@ if(!isset($_GET['ID'])){
 ?>
     <style>
     
-.resultsTable thead th{
-    background-color:   #30487B;
-}
 
-.resultsTable thead td{
-    background-color:   #4E7099;
-}
 
     
     </style>
