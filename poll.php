@@ -43,16 +43,12 @@ if(!isset($_GET['ID'])){
 
 ?>
     <style>
-    .resultsTable table{
+    
+.resultsTable thead th{
     background-color:   #30487B;
 }
 
-
-.resultsTable table thead th{
-    background-color:   #30487B;
-}
-
-.resultsTable table thead td{
+.resultsTable thead td{
     background-color:   #4E7099;
 }
 
