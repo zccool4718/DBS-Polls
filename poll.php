@@ -19,8 +19,12 @@ if(!isset($_GET['ID'])){
                 top.location.href = "http://apps.facebook.com/dbspolls/";
             </script>');
 } elseif($_GET['ID'] > 0){
-    $sql = "SELECT *, count(*) FROM `poll` WHERE id = '" . $_GET['ID'] . "'";
+    $sql = "SELECT *, count(*) as count FROM `poll` WHERE id = '" . $_GET['ID'] . "'";
     $poll = $database->query($sql);
+    
+    foreach($poll as $index => $value){       
+        $results[$value['answers']] = $value['id'];
+    }
     
     if(count($poll) > 0){
         if(isset($_GET['answer'])){
@@ -41,21 +45,19 @@ if(!isset($_GET['ID'])){
     
 }
 
+print_r($results);
+
 ?>
-    <style>
-    
 
-
-    
-    </style>
     
     <table class="resultsTable" cellpadding="0" cellspacing="0" width="100%">
         <thead>
             <tr>
-                <th colspan="2"> Poll Results </th>
+                <th colspan="3"> Poll Results </th>
             </tr>
             <tr>
                 <td>View | Delete | Edit | Invite Friends to Vote </td>
+                <td></td>
                 <td id="votes" class="votes"> Votes: </td>
             </tr>
         </thead>
@@ -63,7 +65,10 @@ if(!isset($_GET['ID'])){
             <tr>
                 <td>1
                 </td>
-                <td>2
+                <td><div id="progressbar"></div>
+
+                </td>
+                <td>XX votes
                 </td>
             </tr>
         </tbody>
