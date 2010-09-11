@@ -42,7 +42,7 @@ if(!isset($_GET['ID'])){
 }
 
 ?>
-    <table cellpadding="0" cellspacing="0" width="100%" class="resultsTable">
+    <table class="resultsTable" cellpadding="0" cellspacing="0" width="100%">
         <thead>
             <tr>
                 <th colspan="2"> Poll Results </th>
