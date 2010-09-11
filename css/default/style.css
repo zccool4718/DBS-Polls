@@ -24,7 +24,8 @@ html{
 }
 
 
-/* Poll Results Table */
+
+
 .resultsTable thead th{
     background-color:   #30487B;
     color:              #ffffff;
@@ -54,7 +55,8 @@ html{
 
 
 
-/* General */
+
+
 .right{
     text-align:         right;
     padding-right:      10px;
@@ -69,7 +71,8 @@ html{
     text-align:         center;
 }
 
-/* Menu */
+
+
 .header thead th a:link {
     color:              #4B4B4B;
     text-decoration:    none;
@@ -96,7 +99,7 @@ html{
 }
 
 
-/* Poll */
+
 .poll{  
     border:             1px solid #B3B3B3;  
     padding:	        0px;
