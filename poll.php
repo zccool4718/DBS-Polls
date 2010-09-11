@@ -42,7 +42,23 @@ if(!isset($_GET['ID'])){
 }
 
 ?>
-        
+    <style>
+    .resultsTable table{
+    background-color:   #30487B;
+}
+
+
+.resultsTable table thead th{
+    background-color:   #30487B;
+}
+
+.resultsTable table thead td{
+    background-color:   #4E7099;
+}
+
+    
+    </style>
+    
     <table class="resultsTable" cellpadding="0" cellspacing="0" width="100%">
         <thead>
             <tr>
