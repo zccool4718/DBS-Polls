@@ -102,3 +102,5 @@ if(!empty($session)) {
 		</tr>   
 	</thead>    
     </table>
+    <br />
+    
