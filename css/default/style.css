@@ -35,6 +35,17 @@ html{
     font-size:          10px;
 }
 
+
+
+/* Poll Results Table */
+.resultsTable{
+    
+}
+
+.resultsTable thead th{
+    background-color:   #30487B;
+}
+
 /* General */
 .right{
     text-align:         right;

@@ -55,7 +55,7 @@ $sql = "SELECT *, count(*) FROM poll WHERE id = " . $_GET['ID'];
 $poll = $database->query($sql);
 
 ?>
-    <table cellpadding="0" cellspacing="0" width="100%">
+    <table cellpadding="0" cellspacing="0" width="100%" class="resultsTable">
         <thead>
             <tr>
                 <th colspan="2"> Poll Results </th>
