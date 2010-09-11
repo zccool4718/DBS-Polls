@@ -22,9 +22,10 @@ if(!isset($_GET['ID'])){
     $sql = "SELECT * FROM `poll` WHERE id = '" . $_GET['ID'] . "'";
     $poll = $database->query($sql);
     
-print_r($poll);
+    $sql = "SELECT * FROM `pollResults` WHERE id = '" . $_GET['ID'] . "'";
+    $pollResults = $database->query($sql);
 
-    foreach($poll as $index => $value){       
+    foreach($pollResults as $index => $value){       
         $results[$value['answers']] = $value['id'];
     }
     
