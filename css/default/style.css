@@ -25,6 +25,10 @@ html{
 
 
 /* Poll Results Table */
+.resultsTable th{
+    background-color:   #30487B;
+}
+
 
 .resultsTable thead th{
     background-color:   #30487B;
