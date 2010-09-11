@@ -71,7 +71,7 @@ if(!empty($session)) {
     <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
     <meta name="author" content="Timothy Dunn">
     <title> Index - Template</title>
-    
+
     <style>
         @import "css/default/style.css";
         @import "css/custom-theme/jquery-ui-1.8.2.custom.css";

@@ -42,6 +42,7 @@ if(!isset($_GET['ID'])){
 }
 
 ?>
+        <link type="text/css" rel="stylesheet" href="css/default/style.css" />
     <table class="resultsTable" cellpadding="0" cellspacing="0" width="100%">
         <thead>
             <tr>
