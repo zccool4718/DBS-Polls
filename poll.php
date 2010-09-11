@@ -14,17 +14,12 @@ if(isset($uid) && !empty($uid)){
 $sql = "INSERT INTO accessLog VALUES (null, '".$_SESSION['id']."', '".$_SERVER['PHP_SELF']."', '".$_SERVER['HTTP_REFERER']."', '".$_SERVER['REMOTE_ADDR']."', '".$_SERVER['HTTP_USER_AGENT']."', null)";
 $database->Execuite($sql);
 
-
-
-                
-
-
 if(!isset($_GET['ID'])){
     print(' <script type="text/javascript">
                 top.location.href = "http://apps.facebook.com/dbspolls/";
             </script>');
 } elseif($_GET['ID'] > 0){
-    $sql = "SELECT * FROM `poll` WHERE id = '" . $_GET['ID'] . "'";
+    $sql = "SELECT *, count(*) FROM `poll` WHERE id = '" . $_GET['ID'] . "'";
     $poll = $database->query($sql);
     
     if(count($poll) > 0){
@@ -32,8 +27,6 @@ if(!isset($_GET['ID'])){
             $sql = "INSERT INTO pollResults values (null, " . $_GET['ID'] . ", '".$uid."', '".$_GET['answer']."', null, '".$_SERVER['REMOTE_ADDR']."', '".$_SERVER['HTTP_REFERER']."')";
             $database->Execuite($sql);
             print("Thank you for your vote.");
-        } else {
-            
         }
     } else {
         print(' <script type="text/javascript">
@@ -48,12 +41,6 @@ if(!isset($_GET['ID'])){
     
 }
 
-$sql = "SELECT *, count(*) FROM poll WHERE id = " . $_GET['ID'];
-$poll = $database->query($sql);
-
-$sql = "SELECT *, count(*) FROM poll WHERE id = " . $_GET['ID'];
-$poll = $database->query($sql);
-
 ?>
     <table cellpadding="0" cellspacing="0" width="100%" class="resultsTable">
         <thead>
@@ -67,9 +54,9 @@ $poll = $database->query($sql);
         </thead>
         <tbody>
             <tr>
-                <td>
+                <td>1
                 </td>
-                <td>
+                <td>2
                 </td>
             </tr>
         </tbody>
