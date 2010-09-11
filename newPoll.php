@@ -112,6 +112,7 @@ $accessToken = $facebook->getAccessToken();
                              FB.ui({
                                 method: 'stream.publish',
                                 message: 'I just made a new pool at DBS Polls, got time to answer a question?',
+                                href: 'http://apps.facebook.com/dbspolls/poll.php?ID=' + output,
                                 action_links: [
                                     { text: 'Make your Own poll', href: 'http://pollsystem.dbscode.com/newPoll.php' }
                                 ],
