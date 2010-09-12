@@ -51,8 +51,7 @@ if(!isset($_GET['ID'])){
             </script>');
     
 }
-$poll['options'] = unserialize($poll['options']);
-print_r($poll['options']);
+print_r(unserialize($poll['options']));
 
     print('
         <script type="text/javascript">
