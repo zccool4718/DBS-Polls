@@ -46,7 +46,7 @@ if(!isset($_GET['ID'])){
     $result = unserialize($poll['options']);
     $poll['options'] = $result;
     
-    foreach($results as $index => $value){
+    foreach($result as $index => $value){
         $results[$index] = 0;
     }
     
