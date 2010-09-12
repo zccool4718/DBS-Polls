@@ -22,7 +22,7 @@ if(!isset($_GET['ID'])){
     $sql = "SELECT * FROM `poll` WHERE id = '" . $_GET['ID'] . "'";
     $poll = $database->query($sql);
     
-    $sql = "SELECT *, count(*) as count FROM `pollResults` WHERE pollID = ". $_GET['ID'];
+    $sql = "SELECT * FROM `pollResults` WHERE pollID = ". $_GET['ID'];
     $pollResults = $database->query($sql);
     
     $sql = "SELECT count(*) as count FROM `pollResults` WHERE pollID = ". $_GET['ID'];
