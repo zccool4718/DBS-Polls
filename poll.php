@@ -51,6 +51,14 @@ if(!isset($_GET['ID'])){
 print_r($results);
 
 ?>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#progressbar").progressbar({
+                value: 37
+	    });
+
+        });
+    </script>
 
     
     <table class="resultsTable" cellpadding="0" cellspacing="0" width="100%">
