@@ -67,8 +67,7 @@ print_r($results);
                 <th colspan="3"> Poll Results </th>
             </tr>
             <tr>
-                <td>View | Delete | Edit | Invite Friends to Vote </td>
-                <td></td>
+                <td colspan="2">View | Delete | Edit | Invite Friends to Vote </td>
                 <td id="votes" class="votes"> Votes: </td>
             </tr>
         </thead>
