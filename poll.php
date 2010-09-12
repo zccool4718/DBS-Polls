@@ -52,7 +52,7 @@ if(!isset($_GET['ID'])){
     
 }
 
-print_r($results);
+print_r($poll);
 
     print('
         <script type="text/javascript">
