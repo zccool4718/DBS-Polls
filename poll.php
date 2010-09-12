@@ -24,9 +24,14 @@ if(!isset($_GET['ID'])){
     
     $sql = "SELECT * FROM `pollResults` WHERE pollID = ". $_GET['ID'];
     $pollResults = $database->query($sql);
-    print_r($pollResults);
+    
     $sql = "SELECT count(*) as count FROM `pollResults` WHERE pollID = ". $_GET['ID'];
     $count = $database->query($sql);
+    $count = $count['count'];
+    
+    foreach($pollResults as $index => $value){       
+        $results[$value['answers']] = $results[$value['answers']] + 1;
+    }
     
     foreach($pollResults as $index => $value){       
         $results[$value['answers']] = $results[$value['answers']] + 1;
@@ -53,19 +58,24 @@ if(!isset($_GET['ID'])){
 
 print_r($results);
 
+    print('
+        <script type="text/javascript">
+            $(document).ready(function(){
+    ');
 foreach($results as $index => $value){
-  //  $tmp[$index]
+    print('
+            $("#progressbar_'.$index.'").progressbar({
+                value: '.(($value / $count) * 100).'
+            });
+            
+    ');
 }
 
+    print('
+            });
+        </script>
+    ');
 ?>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $("#progressbar").progressbar({
-                value: 37
-	    });
-
-        });
-    </script>
 
     
     <table class="resultsTable" cellpadding="0" cellspacing="0" width="100%">
@@ -79,15 +89,20 @@ foreach($results as $index => $value){
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1
-                </td>
-                <td style="width: 200px;"><div id="progressbar" style="height: 16px;"></div>
-                </td>
-                <td>
-                    xx Votes
-                </td>
-            </tr>
+            <? foreach($results as $index => $value){
+                print('
+                    <tr>
+                        <td> $index
+                        </td>
+                        <td style="width: 200px;"><div id="progressbar_'.$index.'" style="height: 16px;"></div>
+                        </td>
+                        <td>
+                            ('.$value.') Votes
+                        </td>
+                    </tr>
+                ');
+            }
+            ?>
         </tbody>
     </table>
     
