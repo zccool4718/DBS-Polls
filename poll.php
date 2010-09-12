@@ -77,10 +77,10 @@ foreach($results as $index => $value){
     <table class="resultsTable" cellpadding="0" cellspacing="0" width="100%">
         <thead>
             <tr>
-                <th colspan="3"> Poll Results </th>
+                <th colspan="4"> Poll Results </th>
             </tr>
             <tr>
-                <td colspan="2">View | Delete | Edit | Invite Friends to Vote </td>
+                <td colspan="3">View | Delete | Edit | Invite Friends to Vote </td>
                 <td id="votes" class="votes"> Total Votes: XX </td>
             </tr>
         </thead>
@@ -90,7 +90,10 @@ foreach($results as $index => $value){
                     <tr>
                         <td> $index
                         </td>
-                        <td style="width: 200px;"><div id="progressbar_'.$index.'" style="height: 16px;"></div> '.(($value / $count) * 100).'%
+                        <td style="width: 200px;"><div id="progressbar_'.$index.'" style="height: 16px;"></div> 
+                        </td>
+                        <td>
+                        '.(($value / $count) * 100).'%
                         </td>
                         <td>
                             ('.$value.') Votes
