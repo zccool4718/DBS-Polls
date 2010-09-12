@@ -51,7 +51,8 @@ if(!isset($_GET['ID'])){
             </script>');
     
 }
-print_r($poll['options']);
+
+$poll['options'] = unserialize($poll['options']);
 
     print('
         <script type="text/javascript">
@@ -87,7 +88,7 @@ foreach($results as $index => $value){
             <? foreach($results as $index => $value){
                 print('
                     <tr>
-                        <td> $index
+                        <td> '.$poll['options'][$index].'
                         </td>
                         <td style="width: 200px;"><div id="progressbar_'.$index.'" style="height: 16px;"></div> 
                         </td>
