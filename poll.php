@@ -38,6 +38,11 @@ if(!isset($_GET['ID'])){
     
     $sql = "SELECT * FROM `pollResults` WHERE pollID = ". $_GET['ID'];
     $pollResults = $database->query($sql);
+    if(isset($pollResults['id'])){
+        $tmp[0] = $pollResults;
+        unset($pollResults);
+        $pollResults = $tmp;
+    }
     
     $sql = "SELECT count(*) as count FROM `pollResults` WHERE pollID = ". $_GET['ID'];
     $count = $database->query($sql);
