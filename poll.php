@@ -22,7 +22,7 @@ if(!isset($_GET['ID'])){
     $sql = "SELECT * FROM `poll` WHERE id = '" . $_GET['ID'] . "'";
     $poll = $database->query($sql);
     
-    $sql = "SELECT * FROM `pollResults` WHERE pollID = ". $_GET['ID'];
+    $sql = "SELECT *, count(*) as count FROM `pollResults` WHERE pollID = ". $_GET['ID'];
     $pollResults = $database->query($sql);
 
     foreach($pollResults as $index => $value){       
@@ -50,6 +50,9 @@ if(!isset($_GET['ID'])){
 
 print_r($results);
 
+$count = 0;
+
+
 ?>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -68,7 +71,7 @@ print_r($results);
             </tr>
             <tr>
                 <td colspan="2">View | Delete | Edit | Invite Friends to Vote </td>
-                <td id="votes" class="votes"> Votes: </td>
+                <td id="votes" class="votes"> Total Votes: XX </td>
             </tr>
         </thead>
         <tbody>
