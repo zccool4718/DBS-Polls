@@ -32,6 +32,9 @@ if(!isset($_GET['ID'])){
     $results = unserialize($poll['options']);
     $poll['options'] = $results;
     
+    foreach($results as $index => $value){
+        $results[$index] = 0;
+    }
     
     foreach($pollResults as $index => $value){       
         $results[$value['answers']] = $results[$value['answers']] + 1;
