@@ -24,7 +24,7 @@ if(!isset($_GET['ID'])){
     
     $sql = "SELECT * FROM `pollResults` WHERE pollID = ". $_GET['ID'];
     $pollResults = $database->query($sql);
-    
+    print_r($pollResults);
     $sql = "SELECT count(*) as count FROM `pollResults` WHERE pollID = ". $_GET['ID'];
     $count = $database->query($sql);
     
