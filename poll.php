@@ -27,7 +27,10 @@ if(!isset($_GET['ID'])){
     
     $sql = "SELECT count(*) as count FROM `pollResults` WHERE pollID = ". $_GET['ID'];
     $count = $database->query($sql);
-    $count = $count['count'];
+    $count = $count['count'];    
+    
+    $results = unserialize($poll['options']);
+    
     
     foreach($pollResults as $index => $value){       
         $results[$value['answers']] = $results[$value['answers']] + 1;
@@ -52,7 +55,6 @@ if(!isset($_GET['ID'])){
     
 }
 
-$poll['options'] = unserialize($poll['options']);
 
     print('
         <script type="text/javascript">
