@@ -47,7 +47,7 @@ if(!isset($_GET['ID'])){
     $poll['options'] = $result;
     
     foreach($result as $index => $value){
-        $results[$index] = 0;
+        $results[count($results) - 1] = 0;
     }
     
     foreach($pollResults as $index => $value){       
