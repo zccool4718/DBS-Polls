@@ -30,6 +30,7 @@ if(!isset($_GET['ID'])){
     $count = $count['count'];    
     
     $results = unserialize($poll['options']);
+    $poll['options'] = $results;
     
     
     foreach($pollResults as $index => $value){       
