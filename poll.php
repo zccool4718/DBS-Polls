@@ -49,7 +49,9 @@ if(!isset($_GET['ID'])){
     foreach($result as $index => $value){
         $results[count($results)] = 0;
     }
+    print_r($pollResults);
     print_r($results);
+    
     foreach($pollResults as $index => $value){       
         $results[$value['answers']] = $results[$value['answers']] + 1;
     }
