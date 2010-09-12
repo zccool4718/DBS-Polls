@@ -76,10 +76,10 @@ print_r($results);
             <tr>
                 <td>1
                 </td>
-                <td><div id="progressbar"></div>
-
+                <td style="width: 200px;"><div id="progressbar"></div>
                 </td>
-                <td>XX votes
+                <td>
+                    xx Votes
                 </td>
             </tr>
         </tbody>
