@@ -19,27 +19,6 @@ if(!isset($_GET['ID'])){
                 top.location.href = "http://apps.facebook.com/dbspolls/";
             </script>');
 } elseif($_GET['ID'] > 0){
-    $sql = "SELECT * FROM `poll` WHERE id = '" . $_GET['ID'] . "'";
-    $poll = $database->query($sql);
-    
-    $sql = "SELECT * FROM `pollResults` WHERE pollID = ". $_GET['ID'];
-    $pollResults = $database->query($sql);
-    
-    $sql = "SELECT count(*) as count FROM `pollResults` WHERE pollID = ". $_GET['ID'];
-    $count = $database->query($sql);
-    $count = $count['count'];    
-    
-    $results = unserialize($poll['options']);
-    $poll['options'] = $results;
-    
-    foreach($results as $index => $value){
-        $results[$index] = 0;
-    }
-    
-    foreach($pollResults as $index => $value){       
-        $results[$value['answers']] = $results[$value['answers']] + 1;
-    }
-        
     if(count($poll) > 0){
         if(isset($_GET['answer'])){
             $sql = "INSERT INTO pollResults values (null, " . $_GET['ID'] . ", '".$uid."', '".$_GET['answer']."', null, '".$_SERVER['REMOTE_ADDR']."', '".$_SERVER['HTTP_REFERER']."')";
@@ -51,6 +30,29 @@ if(!isset($_GET['ID'])){
                     top.location.href = "http://apps.facebook.com/dbspolls/";
                 </script>');
     }
+    
+    $sql = "SELECT * FROM `poll` WHERE id = '" . $_GET['ID'] . "'";
+    $poll = $database->query($sql);
+    
+    $sql = "SELECT * FROM `pollResults` WHERE pollID = ". $_GET['ID'];
+    $pollResults = $database->query($sql);
+    
+    $sql = "SELECT count(*) as count FROM `pollResults` WHERE pollID = ". $_GET['ID'];
+    $count = $database->query($sql);
+    $count = $count['count'];    
+    
+    $result = unserialize($poll['options']);
+    $poll['options'] = $result;
+    
+    foreach($results as $index => $value){
+        $results[$index] = 0;
+    }
+    
+    foreach($pollResults as $index => $value){       
+        $results[$value['answers']] = $results[$value['answers']] + 1;
+    }
+        
+
 
 } else {
     print(' <script type="text/javascript">
