@@ -76,7 +76,7 @@ print_r($results);
             <tr>
                 <td>1
                 </td>
-                <td style="width: 200px;"><div id="progressbar"></div>
+                <td style="width: 200px;"><div id="progressbar" style="height: 16px;"></div>
                 </td>
                 <td>
                     xx Votes
