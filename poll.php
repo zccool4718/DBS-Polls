@@ -29,7 +29,7 @@ if(!isset($_GET['ID'])){
     $count = $database->query($sql);
     
     foreach($pollResults as $index => $value){       
-        $results[$value['answers']][] = $value['id'];
+        $results[$value['answers']] = count($results[$value['answers']]);
     }
     
     if(count($poll) > 0){
@@ -53,7 +53,9 @@ if(!isset($_GET['ID'])){
 
 print_r($results);
 
-
+foreach($results as $index => $value){
+  //  $tmp[$index]
+}
 
 ?>
     <script type="text/javascript">
