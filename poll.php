@@ -19,7 +19,12 @@ if(!isset($_GET['ID'])){
                 top.location.href = "http://apps.facebook.com/dbspolls/";
             </script>');
 } elseif($_GET['ID'] > 0){
-    if(count($poll) > 0){
+
+    
+    $sql = "SELECT * FROM `poll` WHERE id = '" . $_GET['ID'] . "'";
+    $poll = $database->query($sql);
+    
+     if(count($poll) > 0){
         if(isset($_GET['answer'])){
             $sql = "INSERT INTO pollResults values (null, " . $_GET['ID'] . ", '".$uid."', '".$_GET['answer']."', null, '".$_SERVER['REMOTE_ADDR']."', '".$_SERVER['HTTP_REFERER']."')";
             $database->Execuite($sql);
@@ -30,9 +35,6 @@ if(!isset($_GET['ID'])){
                     top.location.href = "http://apps.facebook.com/dbspolls/";
                 </script>');
     }
-    
-    $sql = "SELECT * FROM `poll` WHERE id = '" . $_GET['ID'] . "'";
-    $poll = $database->query($sql);
     
     $sql = "SELECT * FROM `pollResults` WHERE pollID = ". $_GET['ID'];
     $pollResults = $database->query($sql);
