@@ -56,7 +56,7 @@ if(!isset($_GET['ID'])){
     
 }
 
-print_r($results);
+//print_r($results);
 
     print('
         <script type="text/javascript">
