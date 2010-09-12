@@ -32,11 +32,7 @@ if(!isset($_GET['ID'])){
     foreach($pollResults as $index => $value){       
         $results[$value['answers']] = $results[$value['answers']] + 1;
     }
-    
-    foreach($pollResults as $index => $value){       
-        $results[$value['answers']] = $results[$value['answers']] + 1;
-    }
-    
+        
     if(count($poll) > 0){
         if(isset($_GET['answer'])){
             $sql = "INSERT INTO pollResults values (null, " . $_GET['ID'] . ", '".$uid."', '".$_GET['answer']."', null, '".$_SERVER['REMOTE_ADDR']."', '".$_SERVER['HTTP_REFERER']."')";
