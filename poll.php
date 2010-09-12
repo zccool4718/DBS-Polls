@@ -90,7 +90,7 @@ foreach($results as $index => $value){
                     <tr>
                         <td> $index
                         </td>
-                        <td style="width: 200px;"><div id="progressbar_'.$index.'" style="height: 16px;"></div>
+                        <td style="width: 200px;"><div id="progressbar_'.$index.'" style="height: 16px;"></div> '.(($value / $count) * 100).'%
                         </td>
                         <td>
                             ('.$value.') Votes
