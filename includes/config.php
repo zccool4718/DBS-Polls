@@ -10,15 +10,15 @@ session_start();
 function getDBinfo(){
     $db["host"]     = "localhost";
     $db["username"] = "pollsystem";
-    $db["password"] = "Qazxsw2!";
+    $db["password"] = " !";
     $db["database"] = "pollsystem_Facebook";
     return $db;
 }
 
 function getFacebookInfo(){    
-    $fbConfig['api_key'] = "f6150475525e7dc0ed54fa64b13adc38";
-    $fbConfig['app_ID'] = "156907777659800";
-    $fbConfig['app_secret'] = "a94589c94c8b5f547d5d53211254e496";
+    $fbConfig['api_key'] = " ";
+    $fbConfig['app_ID'] = " ";
+    $fbConfig['app_secret'] = " ";
     $fbConfig['app_url'] = "http://apps.facebook.com/dbspolls/";
     return $fbConfig;
 }
